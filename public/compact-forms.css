@@ -1,0 +1,390 @@
+/* Compact data entry: widths reflect the information entered, not text limits. */
+.app-workspace.employee-workspace :is(.employee-form,.master-form,.form-card) :is(input,select,textarea){font-size:12px;line-height:1.35;padding:5px 8px;border-radius:4px}
+.app-workspace.employee-workspace :is(.employee-form,.master-form,.form-card) input:not([type=checkbox]):not([type=hidden]):not([type=file]),
+.app-workspace.employee-workspace :is(.employee-form,.master-form,.form-card) select{height:30px;min-height:30px}
+.app-workspace.employee-workspace :is(.employee-form,.master-form,.form-card) textarea{min-height:58px;height:68px;resize:vertical}
+.app-workspace.employee-workspace :is(.employee-form,.master-form,.form-card) input[type=file]{min-height:30px;max-width:300px;padding:3px 5px}
+.app-workspace.employee-workspace :is(.employee-form,.master-form,.form-card) input[type=checkbox]{width:15px;height:15px;min-height:15px;padding:0}
+.app-workspace.employee-workspace :is(.employee-form,.master-form) .form-grid,
+.app-workspace.employee-workspace .master-form{gap:9px 16px;margin-bottom:12px}
+.app-workspace.employee-workspace :is(.employee-form,.master-form) .form-grid :is(input,select,textarea),
+.app-workspace.employee-workspace .master-form :is(input,select,textarea){margin-top:3px}
+.app-workspace.employee-workspace :is(.employee-form,.master-form) .form-actions{padding-top:10px;gap:8px}
+.app-workspace.employee-workspace :is(.employee-form,.master-form) .btn{min-height:30px;padding:5px 11px}
+
+/* Employee identification and personal information follow the reference's label/value rows. */
+.app-workspace.employee-workspace .employee-form .reference-form{padding:14px 16px}
+.app-workspace.employee-workspace .employee-form .reference-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;padding:10px 0}
+.app-workspace.employee-workspace .employee-form .reference-field{display:grid;grid-template-columns:132px minmax(0,1fr);gap:8px;align-items:center;padding:0;min-width:0}
+.app-workspace.employee-workspace .employee-form .reference-field>label{margin:0;line-height:1.3;font-size:12px}
+.app-workspace.employee-workspace .employee-form .reference-field :is(input,select,textarea){margin:0;max-width:270px}
+.app-workspace.employee-workspace .employee-form .reference-field:has(#company_id){grid-column:auto}
+.app-workspace.employee-workspace .employee-form .identification-fields{grid-template-columns:minmax(0,.45fr) minmax(0,1.2fr) minmax(0,1.2fr)}
+.app-workspace.employee-workspace .employee-form .employee-name-field{grid-column:2}
+.app-workspace.employee-workspace .employee-form .reference-field:has(#father_name){grid-column:3}
+.app-workspace.employee-workspace .employee-form #full_name,
+.app-workspace.employee-workspace .employee-form #father_name{max-width:100%}
+.app-workspace.employee-workspace .employee-form .identification-layout{grid-template-columns:minmax(0,1fr) 154px;gap:18px;padding:0;margin-top:10px}
+.app-workspace.employee-workspace .employee-form .identification-fields{padding:0}
+.app-workspace.employee-workspace .employee-form .employee-photo-panel{display:block;width:154px;height:auto;padding:10px;align-self:start}
+.app-workspace.employee-workspace .employee-form .employee-photo-preview{height:132px;margin-bottom:8px}
+.app-workspace.employee-workspace .employee-form .employee-photo-panel>label{margin-bottom:8px}
+.app-workspace.employee-workspace .employee-form .employee-photo-panel input{width:100%;font-size:10px}
+.app-workspace.employee-workspace .employee-form .form-intro{padding-bottom:10px;margin-bottom:0}
+.app-workspace.employee-workspace .employee-form .reference-section-title{padding:7px 10px;margin-top:12px;font-size:11px}
+.app-workspace.employee-workspace .employee-form .single-column{grid-template-columns:1fr}
+.app-workspace.employee-workspace .employee-form .textarea-field{align-items:start}
+.app-workspace.employee-workspace .employee-form .textarea-field>label{padding-top:6px}
+.app-workspace.employee-workspace .employee-form .textarea-field textarea{max-width:680px}
+.app-workspace.employee-workspace .employee-form .compact-check{height:30px;min-height:30px;width:110px;padding:4px 8px;border-radius:4px}
+.app-workspace.employee-workspace .employee-form #employee_no{max-width:88px}
+.app-workspace.employee-workspace .employee-form :is(#ntn,#eobi_no){max-width:130px}
+.app-workspace.employee-workspace .employee-form input[type=date]{max-width:150px}
+.app-workspace.employee-workspace .employee-form #gender{max-width:120px}
+.app-workspace.employee-workspace .employee-form :is(#grade_id,#employment_status,#employment_type,#religion_id){max-width:175px}
+.app-workspace.employee-workspace .employee-form :is(#cnic,#passport_no,#phone){max-width:200px}
+.app-workspace.employee-workspace .employee-form .reference-choices{padding:10px 0;gap:7px 16px}
+.app-workspace.employee-workspace .employee-form .repeater-row{padding:12px 14px 36px;margin-bottom:12px}
+.app-workspace.employee-workspace .employee-form .repeater-row .form-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.app-workspace.employee-workspace .employee-form .repeater-row :is(input,select){max-width:300px}
+.app-workspace.employee-workspace .employee-form .repeater-row input[type=date]{max-width:150px}
+.app-workspace.employee-workspace .employee-form .repeater-row textarea{max-width:680px}
+.app-workspace.employee-workspace .employee-form .section-heading{margin-bottom:10px}
+
+/* Master data, including edit dialogs, uses short / medium / long field slots. */
+.app-workspace.employee-workspace .master-form,
+.app-workspace.employee-workspace .master-form .form-grid{grid-template-columns:repeat(12,minmax(0,1fr))}
+.app-workspace.employee-workspace .master-form>label{grid-column:span 4;min-width:0}
+.app-workspace.employee-workspace .master-form .field-short{grid-column:span 3}
+.app-workspace.employee-workspace .master-form .field-medium{grid-column:span 4}
+.app-workspace.employee-workspace .master-form .field-long{grid-column:span 6}
+.app-workspace.employee-workspace .master-form .field-full,
+.app-workspace.employee-workspace .master-form .wide{grid-column:1/-1}
+.app-workspace.employee-workspace .master-form .field-short :is(input,select){max-width:175px;min-width:0}
+.app-workspace.employee-workspace .master-form .field-short input[type=number]{max-width:130px}
+.app-workspace.employee-workspace .master-form .field-medium :is(input,select){max-width:300px;min-width:0}
+.app-workspace.employee-workspace .master-form .field-long input{max-width:460px}
+.app-workspace.employee-workspace .master-form textarea{max-width:680px;min-width:0}
+.app-workspace.employee-workspace .master-form h3{margin:12px 0 4px}
+.app-workspace.employee-workspace .master-form p{margin:4px 0 8px;font-size:12px}
+.app-workspace.employee-workspace .master-edit-dialog .form-grid{padding:14px 18px}
+.app-workspace.employee-workspace .master-edit-dialog .form-grid .form-grid{padding:0}
+.app-workspace.employee-workspace .employee-form .form-grid label>input:not([type=checkbox]):not([type=hidden]),
+.app-workspace.employee-workspace .employee-form .form-grid label>select,
+.app-workspace.employee-workspace .employee-form .form-grid label>textarea,
+.app-workspace.employee-workspace .master-form label>input:not([type=checkbox]):not([type=hidden]),
+.app-workspace.employee-workspace .master-form label>select,
+.app-workspace.employee-workspace .master-form label>textarea{display:block}
+.app-workspace.employee-workspace .master-table>form.master-form{display:flex;align-items:flex-end;flex-wrap:wrap;gap:8px}
+.app-workspace.employee-workspace .master-table>form.master-form>label{width:260px;max-width:100%}
+.app-workspace.employee-workspace .master-table>form.master-form>.form-actions{padding:0;border:0}
+
+@media(max-width:1150px){
+ .app-workspace.employee-workspace .employee-form .identification-fields{grid-template-columns:1fr}
+ .app-workspace.employee-workspace .employee-form .reference-field{grid-template-columns:120px minmax(0,1fr)}
+}
+@media(max-width:760px){
+ .app-workspace.employee-workspace .employee-form .reference-fields{grid-template-columns:1fr;gap:10px}
+ .app-workspace.employee-workspace .employee-form .identification-layout{grid-template-columns:1fr}
+ .app-workspace.employee-workspace .employee-form .repeater-row .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .app-workspace.employee-workspace .master-form .field-short,
+ .app-workspace.employee-workspace .master-form .field-medium{grid-column:span 6}
+}
+@media(max-width:520px){
+ .app-workspace.employee-workspace .employee-form .reference-field{grid-template-columns:1fr;gap:4px}
+ .app-workspace.employee-workspace .employee-form .repeater-row .form-grid{grid-template-columns:1fr}
+ .app-workspace.employee-workspace .master-form>label,
+ .app-workspace.employee-workspace .master-form :is(.field-short,.field-medium,.field-long){grid-column:1/-1}
+ .app-workspace.employee-workspace :is(.employee-form,.master-form) input:not([type=checkbox]):not([type=hidden]):not([type=file]),
+ .app-workspace.employee-workspace :is(.employee-form,.master-form) select{height:36px;min-height:36px}
+ .app-workspace.employee-workspace .employee-form .employee-name-inputs{height:36px}
+ .app-workspace.employee-workspace .employee-form .employee-name-inputs input{height:34px!important;min-height:34px!important}
+}
+.employee-entry-page .employee-form{
+    width:100%;
+    max-width:none;
+}
+.employee-entry-page .employee-form .module-heading,
+.employee-entry-page .employee-form .form-tabs{
+    width:100%;
+    box-sizing:border-box;
+}
+/* Compact module navigation and the merged Employee Info subsections. */
+.app-workspace.employee-workspace .employee-form .form-tabs{display:flex;flex-wrap:wrap;gap:5px;padding:9px 12px;min-height:0}
+.app-workspace.employee-workspace .employee-form .form-tabs button{flex:0 0 auto;width:auto;min-width:0;min-height:30px;height:auto;padding:6px 10px;font-size:11px;line-height:1.3;border-radius:4px;white-space:nowrap}
+.app-workspace.employee-workspace .employee-form .module-heading{padding:9px 12px;font-size:10px}
+.app-workspace.employee-workspace .employee-subsection{margin-top:14px;min-width:0}
+.app-workspace.employee-workspace .employee-subsection>.section-heading{border-top:1px solid var(--line);padding-top:12px}
+.language-field{width:320px;max-width:100%;padding:10px 0}
+.language-field>small{display:block;margin-top:5px;color:var(--muted);font-size:11px}
+.language-dropdown{position:relative}
+.language-dropdown summary{display:flex;align-items:center;justify-content:space-between;gap:10px;list-style:none;cursor:pointer;border:1px solid #bac7d8;border-radius:4px;padding:5px 8px;min-height:30px;background:white;font-size:12px}
+.language-dropdown summary::-webkit-details-marker{display:none}
+.language-dropdown summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.language-dropdown [data-language-summary]{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.language-dropdown-panel{position:absolute;top:calc(100% + 4px);left:0;width:100%;z-index:4;padding:10px;border:1px solid var(--line);border-radius:6px;background:white;box-shadow:0 8px 22px #17203326}
+.language-options{max-height:210px;overflow-y:auto;margin-top:7px}
+.app-workspace.employee-workspace .employee-form .language-search-label{display:block;font-size:11px}
+.app-workspace.employee-workspace .employee-form .language-search-label input{display:block;width:100%;margin-top:4px}
+.app-workspace.employee-workspace .employee-form .language-option{display:flex;align-items:center;gap:8px;padding:7px 5px;font-size:12px;cursor:pointer}
+.app-workspace.employee-workspace .employee-form .language-option[hidden]{display:none}
+.language-option:hover{background:#fff4e9}
+@media(max-width:520px){.app-workspace.employee-workspace .employee-form .form-tabs button{min-height:36px}.language-dropdown summary{min-height:36px}.language-dropdown-panel{position:relative;top:4px}}
+.app-workspace.employee-workspace .employee-form .reference-form{overflow:visible}
+
+/* Keep the employee photo picker inside its preview and align it with the compact field rows. */
+.app-workspace.employee-workspace .employee-form .identification-layout{grid-template-columns:minmax(0,1fr) 154px;gap:14px;align-items:start}
+.app-workspace.employee-workspace .employee-form .identification-fields>.employee-form-row-three:first-child{grid-template-columns:minmax(220px,.6fr) minmax(340px,1fr) minmax(340px,1fr)}
+.app-workspace.employee-workspace .employee-form .employee-photo-panel{position:relative;width:154px;height:auto;min-height:0;padding:0;border:0;background:transparent;align-self:start}
+.app-workspace.employee-workspace .employee-form .employee-photo-preview{display:grid;width:100%;height:150px;margin:0;border:2px dashed #cbd8ed;border-radius:7px;background:#fff;place-items:center;color:#e97413;font-size:12px;font-weight:600;letter-spacing:0;cursor:pointer;overflow:hidden}
+.app-workspace.employee-workspace .employee-form .employee-photo-preview:hover{border-color:#f58220;background:#fffaf5}
+.app-workspace.employee-workspace .employee-form .employee-photo-panel input[type=file]{position:absolute;width:1px!important;height:1px!important;min-height:0!important;padding:0!important;margin:-1px!important;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;opacity:0}
+.app-workspace.employee-workspace .employee-form .employee-photo-panel input[type=file]:focus-visible+.employee-photo-preview{outline:2px solid #f58220;outline-offset:2px}
+.app-workspace.employee-workspace .employee-form .employee-photo-preview img{display:block;width:100%;height:100%;object-fit:cover}
+.app-workspace.employee-workspace .employee-form .identification-layout>.reference-fields{min-height:0}
+@media(max-width:1150px){.app-workspace.employee-workspace .employee-form .identification-fields>.employee-form-row-three:first-child{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.app-workspace.employee-workspace .employee-form .identification-layout{grid-template-columns:minmax(0,1fr) 154px;gap:10px}.app-workspace.employee-workspace .employee-form .identification-fields>.employee-form-row-three:first-child{grid-template-columns:minmax(0,1fr)}.app-workspace.employee-workspace .employee-form .employee-photo-panel{width:154px}}
+@media(max-width:520px){.app-workspace.employee-workspace .employee-form .identification-layout{grid-template-columns:minmax(0,1fr)}.app-workspace.employee-workspace .employee-form .employee-photo-panel{width:154px;grid-row:1}}
+
+/* Tighter shared page rhythm keeps screens dense without crowding controls. */
+.app-workspace.employee-workspace .content{max-width:1680px;margin-inline:auto;padding:20px 24px 60px}
+.app-workspace.employee-workspace .employee-breadcrumb{margin-bottom:14px}
+.app-workspace.employee-workspace .page-head{gap:14px;margin-bottom:16px}
+.app-workspace.employee-workspace .card{padding:18px;margin-bottom:16px}
+.app-workspace.employee-workspace .table-card{padding:0}
+.app-workspace.employee-workspace .card-head{gap:12px;margin-bottom:12px}
+.app-workspace.employee-workspace .metric-grid{gap:12px;margin-bottom:18px}
+.app-workspace.employee-workspace .metric{padding:15px}
+.app-workspace.employee-workspace .metric strong{font-size:25px;margin:5px 0}
+.app-workspace.employee-workspace .grid-2{gap:16px}
+.app-workspace.employee-workspace .form-grid{gap:12px 14px;margin-bottom:16px}
+.app-workspace.employee-workspace th{padding:10px 12px}
+.app-workspace.employee-workspace td{padding:10px 12px}
+.app-workspace.employee-workspace .directory-table td{height:auto;padding:10px}
+.app-workspace.employee-workspace .directory-table .person>span{width:38px;height:38px}
+.app-workspace.employee-workspace .master-list-scroll{margin-top:12px}
+.app-workspace.employee-workspace .master-records th,
+.app-workspace.employee-workspace .master-records td{padding:9px 11px}
+.app-workspace.employee-workspace .master-row-actions{gap:6px}
+.app-workspace.employee-workspace .master-nav a{padding:8px 10px}
+.app-workspace.employee-workspace .sidebar nav p{margin:16px 4px 6px}
+.app-workspace.employee-workspace .sidebar nav>a{padding:8px 6px}
+.app-workspace.employee-workspace .employee-subnav a{padding:6px 10px!important}
+.app-workspace.employee-workspace .employee-form .reference-section-title{margin-top:10px;padding:6px 10px}
+.app-workspace.employee-workspace .employee-form .repeater-row{padding:12px 12px 34px;margin-bottom:10px}
+@media(max-width:760px){
+ .app-workspace.employee-workspace .content{padding:16px 14px 100px}
+ .app-workspace.employee-workspace .card{padding:14px;margin-bottom:12px}
+ .app-workspace.employee-workspace .table-card{padding:0}
+ .app-workspace.employee-workspace .page-head{margin-bottom:12px}
+ .app-workspace.employee-workspace .metric-grid{gap:9px;margin-bottom:12px}
+}
+@media(max-width:520px){
+ .app-workspace.employee-workspace .content{padding:12px 9px 90px}
+ .app-workspace.employee-workspace .card{padding:11px;margin-bottom:10px}
+ .app-workspace.employee-workspace .table-card{padding:0}
+}
+
+/* Keep the identification controls usable without changing other form layouts. */
+.app-workspace.employee-workspace .employee-form .identification-fields{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px 12px}
+.app-workspace.employee-workspace .employee-form .identification-fields .reference-field{grid-template-columns:110px minmax(0,1fr);gap:6px}
+.app-workspace.employee-workspace .employee-form .identification-fields .reference-field :is(input,select){width:100%;max-width:270px;min-width:0}
+.app-workspace.employee-workspace .employee-form .identification-fields #employee_no{width:64px;max-width:100%}
+.app-workspace.employee-workspace .employee-form .identification-fields input[type=date]{width:150px;max-width:100%}
+.app-workspace.employee-workspace .employee-form .identification-fields #gender{width:120px;max-width:100%}
+
+@media(max-width:760px){
+    .app-workspace.employee-workspace .app-shell{
+        display:block;
+        min-width:0;
+    }
+    .app-workspace.employee-workspace .sidebar{
+        position:fixed;
+        inset:0 auto 0 0;
+        width:min(280px,85vw);
+        height:100dvh;
+        overflow-y:auto;
+        transform:translateX(-100%);
+        transition:transform .2s ease;
+        z-index:40;
+    }
+    .app-workspace.employee-workspace.nav-open .sidebar{transform:translateX(0)}
+    .app-workspace.employee-workspace .content{
+        width:100%;
+        max-width:none;
+        min-width:0;
+        padding:16px 12px 96px;
+    }
+    .app-workspace.employee-workspace .topbar{
+        position:sticky;
+        top:0;
+        z-index:20;
+        width:100%;
+        height:auto;
+        min-height:56px;
+        padding:8px 12px;
+        gap:8px;
+    }
+    .app-workspace.employee-workspace .topbar-account{gap:8px}
+    .app-workspace.employee-workspace .account-name{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .app-workspace.employee-workspace .header-bell{padding-right:8px;margin-right:0}
+    .app-workspace.employee-workspace .page-head{
+        flex-wrap:wrap;
+        align-items:flex-start;
+        gap:10px;
+        margin-bottom:14px;
+    }
+    .app-workspace.employee-workspace .page-head> :first-child{min-width:0}
+    .app-workspace.employee-workspace .page-head h1{font-size:21px;overflow-wrap:anywhere}
+    .app-workspace.employee-workspace .page-head .btn{max-width:100%}
+    .app-workspace.employee-workspace .card{min-width:0;padding:14px}
+    .app-workspace.employee-workspace .table-card{padding:0}
+    .app-workspace.employee-workspace .table-scroll,
+    .app-workspace.employee-workspace .master-list-scroll{
+        width:100%;
+        max-width:100%;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+    .app-workspace.employee-workspace table{min-width:680px}
+    .app-workspace.employee-workspace .directory-table table{min-width:900px}
+    .app-workspace.employee-workspace .master-layout{grid-template-columns:minmax(0,1fr);gap:12px}
+    .app-workspace.employee-workspace .master-layout>*{min-width:0}
+    .app-workspace.employee-workspace .master-nav{
+        position:static;
+        display:flex;
+        flex-wrap:nowrap;
+        gap:4px;
+        overflow-x:auto;
+        padding:6px;
+        white-space:nowrap;
+        -webkit-overflow-scrolling:touch;
+    }
+    .app-workspace.employee-workspace .master-nav a{flex:0 0 auto}
+    .app-workspace.employee-workspace .master-form,
+    .app-workspace.employee-workspace .master-form .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .app-workspace.employee-workspace .master-form>label,
+    .app-workspace.employee-workspace .master-form .field-short,
+    .app-workspace.employee-workspace .master-form .field-medium,
+    .app-workspace.employee-workspace .master-form .field-long{grid-column:span 1;min-width:0}
+    .app-workspace.employee-workspace .master-form .field-full,
+    .app-workspace.employee-workspace .master-form .wide{grid-column:1/-1}
+    .app-workspace.employee-workspace :is(.employee-form,.master-form) :is(input,select,textarea){max-width:100%}
+    .app-workspace.employee-workspace .employee-form .identification-layout{grid-template-columns:minmax(0,1fr) 150px;gap:12px}
+    .app-workspace.employee-workspace .employee-form .identification-fields{min-width:0}
+    .app-workspace.employee-workspace .employee-form .form-tabs{
+        position:static;
+        display:flex;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        gap:5px;
+        margin:0 0 12px;
+        padding:8px;
+        -webkit-overflow-scrolling:touch;
+    }
+    .app-workspace.employee-workspace .employee-form .form-tabs button{flex:0 0 auto}
+    .app-workspace.employee-workspace .employee-form>.tab-panel{min-height:0}
+    .app-workspace.employee-workspace .repeater-row{min-width:0;padding:12px 12px 42px}
+    .app-workspace.employee-workspace .sticky-actions{
+        position:fixed;
+        inset:auto 0 0;
+        z-index:25;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        gap:8px;
+        padding:8px 12px;
+        border-radius:0;
+        background:#fff;
+    }
+    .app-workspace.employee-workspace .sticky-actions>span{display:none}
+    .app-workspace.employee-workspace .sticky-actions>div{width:100%;justify-content:flex-end}
+    .app-workspace.employee-workspace .sticky-actions .btn{flex:0 1 auto}
+}
+@media(max-width:520px){
+    .app-workspace.employee-workspace .content{padding:12px 8px 90px}
+    .app-workspace.employee-workspace .topbar{padding:7px 8px}
+    .app-workspace.employee-workspace .topbar-account{gap:5px}
+    .app-workspace.employee-workspace .account-name{display:none}
+    .app-workspace.employee-workspace .header-bell{display:none}
+    .app-workspace.employee-workspace .page-head h1{font-size:19px}
+    .app-workspace.employee-workspace .card{padding:11px}
+    .app-workspace.employee-workspace .table-card{padding:0}
+    .app-workspace.employee-workspace .metric-grid,
+    .app-workspace.employee-workspace .grid-2,
+    .app-workspace.employee-workspace .directory-filter-grid,
+    .app-workspace.employee-workspace .master-form,
+    .app-workspace.employee-workspace .master-form .form-grid{grid-template-columns:minmax(0,1fr)}
+    .app-workspace.employee-workspace .master-form>label,
+    .app-workspace.employee-workspace .master-form .field-short,
+    .app-workspace.employee-workspace .master-form .field-medium,
+    .app-workspace.employee-workspace .master-form .field-long,
+    .app-workspace.employee-workspace .master-form .field-full,
+    .app-workspace.employee-workspace .master-form .wide{grid-column:1/-1}
+    .app-workspace.employee-workspace .employee-form .identification-layout{grid-template-columns:minmax(0,1fr)}
+    .app-workspace.employee-workspace .employee-form .employee-photo-panel{width:100%;max-width:220px}
+    .app-workspace.employee-workspace .employee-form .repeater-row .form-grid{grid-template-columns:minmax(0,1fr)}
+    .app-workspace.employee-workspace .employee-form .section-heading{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:8px;
+    }
+    .app-workspace.employee-workspace .employee-form .section-heading>.btn{align-self:flex-start}
+    .app-workspace.employee-workspace .sticky-actions .btn{min-width:0;padding:7px 10px;white-space:normal}
+}
+
+@media(max-width:760px){
+    .login-wrap{width:min(100% - 24px,520px);margin:12px auto}
+    .login-card{min-width:0;padding:24px}
+    .login-brand{display:none}
+}
+
+.app-workspace.employee-workspace .employee-form .identification-fields{display:flex;flex-direction:column}
+.app-workspace.employee-workspace .employee-form .employee-form-row{
+    display:grid;
+    width:100%;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px 20px;
+    padding:8px 0;
+}
+.app-workspace.employee-workspace .employee-form .employee-form-row-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.app-workspace.employee-workspace .employee-form .employee-form-row-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.app-workspace.employee-workspace .employee-form .employee-form-row>.reference-field{min-width:0}
+.app-workspace.employee-workspace .employee-form .language-field{display:flex;width:100%;align-items:center;flex-wrap:wrap;gap:8px 12px;padding:8px 0}
+.app-workspace.employee-workspace .employee-form .language-field [data-language-summary]{max-width:100%;overflow-wrap:anywhere}
+.app-workspace.employee-workspace .employee-form .language-field small{flex-basis:100%}
+.app-workspace.employee-workspace .employee-picker-dialog{
+    width:min(560px,calc(100vw - 28px));
+    max-width:none;
+    max-height:min(80vh,700px);
+    padding:0;
+    border:1px solid #dbe3ee;
+    border-radius:10px;
+    color:#1e293b;
+    box-shadow:0 20px 60px #0f172a40;
+}
+.app-workspace.employee-workspace .employee-picker-dialog::backdrop{background:#0f172a80}
+.app-workspace.employee-workspace .employee-picker-content{padding:18px}
+.app-workspace.employee-workspace .employee-picker-content h2{margin:0 0 14px;font-size:18px}
+.app-workspace.employee-workspace .employee-picker-content .language-search-label{display:block;margin-bottom:12px}
+.app-workspace.employee-workspace .employee-picker-content .language-search-label input{display:block;width:100%;margin-top:5px}
+.app-workspace.employee-workspace .employee-picker-content .language-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;max-height:45vh;overflow-y:auto}
+.app-workspace.employee-workspace .employee-picker-content .language-option{display:flex;align-items:center;gap:8px;min-width:0}
+.app-workspace.employee-workspace .employee-picker-content .language-option input{flex:0 0 auto}
+.app-workspace.employee-workspace .employee-picker-content .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.app-workspace.employee-workspace .employee-picker-dialog .dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+
+@media(max-width:1150px){
+    .app-workspace.employee-workspace .employee-form .employee-form-row,
+    .app-workspace.employee-workspace .employee-form .employee-form-row-four{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+    .app-workspace.employee-workspace .employee-form .employee-form-row,
+    .app-workspace.employee-workspace .employee-form .employee-form-row-four,
+    .app-workspace.employee-workspace .employee-form .employee-form-row-two{grid-template-columns:minmax(0,1fr)}
+    .app-workspace.employee-workspace .employee-form .employee-form-row .reference-field{grid-template-columns:112px minmax(0,1fr)}
+}
+@media(max-width:520px){
+    .app-workspace.employee-workspace .employee-picker-content .language-options,
+    .app-workspace.employee-workspace .employee-picker-content .form-grid{grid-template-columns:minmax(0,1fr)}
+}

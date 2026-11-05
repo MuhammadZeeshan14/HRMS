@@ -1,0 +1,92 @@
+/* Shared visual system for every routed HRIS page. Loaded after legacy page styles. */
+:root{--navy:#101725;--navy2:#1e293b;--blue:#f58220;--amber:#f58220;--sky:#fff4e9;--ink:#172033;--muted:#718096;--line:#e4ebf5;--bg:#f7f9fc;--shadow:0 1px 3px #182b460a;--green:#128462;--red:#b43d48}
+body{font-family:Inter,'Segoe UI',Arial,sans-serif;color:var(--ink)}
+.app-workspace.employee-workspace .app-shell{grid-template-columns:256px minmax(0,1fr)}
+.app-workspace.employee-workspace .sidebar{background:var(--navy);padding:0}
+.app-workspace.employee-workspace .brand{height:64px;padding:12px 16px;gap:12px;border-color:#283245}
+.app-workspace.employee-workspace .brand-name{font-size:15px;line-height:1.25}
+.app-workspace.employee-workspace .brand-logo{width:44px;height:32px;border-radius:5px;background:white;object-fit:contain}
+.app-workspace.employee-workspace .sidebar nav{padding:12px;gap:2px}
+.app-workspace.employee-workspace .sidebar nav p{font-size:10px;letter-spacing:.05em;margin:20px 4px 8px;color:#98abc5}
+.app-workspace.employee-workspace .sidebar nav>a{font-size:13px;padding:10px 6px;font-weight:500}
+.app-workspace.employee-workspace .employee-subnav{padding-left:20px}
+.app-workspace.employee-workspace .employee-subnav a{font-size:11px;padding:8px 10px!important;font-weight:400}
+.app-workspace.employee-workspace .employee-subnav a::before{content:none}
+.app-workspace.employee-workspace .sidebar nav a.active{background:#f582201c;border:1px solid #f5822050;color:#ff952f}
+.app-workspace.employee-workspace .sidebar nav a:hover{background:#ffffff0a;color:white}
+.app-workspace.employee-workspace .sidebar-foot{padding:16px;font-size:11px;border-color:#283245}
+.app-workspace.employee-workspace .topbar{height:64px;padding:0 28px;background:white;border-color:var(--line)}
+.app-workspace.employee-workspace .account-avatar{width:34px;height:34px;font-size:12px}
+.app-workspace.employee-workspace .account-name{font-size:12px}.app-workspace.employee-workspace .account-name small{font-size:10px}
+.app-workspace.employee-workspace .content{padding:24px 28px 80px;max-width:none}
+.app-workspace.employee-workspace .employee-breadcrumb{font-size:12px;margin-bottom:22px;color:#7f91ab;gap:8px}
+.app-workspace.employee-workspace .employee-breadcrumb>.ui-icon{width:15px;height:15px}
+.app-workspace.employee-workspace h1{font-size:24px;line-height:1.3;letter-spacing:-.5px;margin:0 0 4px}
+.app-workspace.employee-workspace h2{font-size:16px;font-weight:600;letter-spacing:-.15px}
+.app-workspace.employee-workspace h3{font-size:13px;font-weight:600}
+.app-workspace.employee-workspace .page-head{align-items:center;gap:20px;margin-bottom:22px}
+.app-workspace.employee-workspace .page-head p,.app-workspace.employee-workspace .card-head p,.app-workspace.employee-workspace .section-heading p{font-size:12px;color:var(--muted);margin:4px 0 0}
+.app-workspace.employee-workspace .eyebrow{color:#7386a3;font-size:10px;font-weight:600;letter-spacing:.07em}
+.app-workspace.employee-workspace .card,.app-workspace.employee-workspace .profile-head{background:white;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.app-workspace.employee-workspace .card{padding:22px}
+.app-workspace.employee-workspace .table-card{padding:0}
+.app-workspace.employee-workspace .btn,.login-page .btn{border-radius:6px;min-height:36px;padding:8px 14px;font-size:12px;font-weight:600;gap:7px;border-color:#d2ddeb;color:#3b4e68;background:white;box-shadow:none;white-space:nowrap}
+.app-workspace.employee-workspace .btn.primary,.login-page .btn.primary{background:var(--blue);border-color:var(--blue);color:white}
+.app-workspace.employee-workspace .btn.primary:hover,.login-page .btn.primary:hover{background:#e97413;border-color:#e97413}
+.app-workspace.employee-workspace .btn.dark{background:var(--navy);border-color:var(--navy);color:white}
+.app-workspace.employee-workspace .btn.danger{color:var(--red);background:#fff1f2;border-color:#f4ced3}
+.app-workspace.employee-workspace input,.app-workspace.employee-workspace select,.app-workspace.employee-workspace textarea,.login-page input{font:12px/1.5 Inter,'Segoe UI',Arial,sans-serif;border:1px solid #bac7d8;border-radius:6px;background:white;padding:8px 10px;color:var(--ink);min-width:0}
+.app-workspace.employee-workspace input:not([type=checkbox]):not([type=hidden]):not([type=file]),.app-workspace.employee-workspace select{min-height:36px;height:36px}
+.app-workspace.employee-workspace input:focus,.app-workspace.employee-workspace select:focus,.app-workspace.employee-workspace textarea:focus,.login-page input:focus{border-color:var(--blue);box-shadow:0 0 0 2px #fff0e3}
+.app-workspace.employee-workspace input[type=checkbox]{width:15px;height:15px;min-height:0;padding:0;accent-color:var(--blue);flex-shrink:0}
+.app-workspace.employee-workspace .form-grid label,.app-workspace.employee-workspace .reference-field label{font-size:11px;font-weight:500;color:#344762}
+.app-workspace.employee-workspace .form-grid{gap:16px;margin-bottom:24px}
+.app-workspace.employee-workspace th{background:#eff4ff;color:#5b6b82;font-size:10px;letter-spacing:.035em;padding:13px 14px;line-height:1.4}
+.app-workspace.employee-workspace td{border-color:#edf2fa;font-size:12px;color:#34435a;padding:16px 14px}
+.app-workspace.employee-workspace tbody tr:hover{background:#fafcff}
+.app-workspace.employee-workspace .badge{border:1px solid #dbe4ed;border-radius:20px;background:#f5f7fa;color:#63748a;font-size:10px;font-weight:600;padding:3px 9px}
+.app-workspace.employee-workspace .badge.active{border-color:#a7efd1;background:#ecfdf5;color:var(--green)}
+.app-workspace.employee-workspace .badge.exited{border-color:#f4ced3;background:#fff1f2;color:var(--red)}
+.app-workspace.employee-workspace .tabs{padding:14px;gap:5px;flex-wrap:wrap;overflow:visible;background:white;border-color:var(--line);box-shadow:var(--shadow)}
+.app-workspace.employee-workspace .tabs button{border:1px solid #ccd8e8;border-radius:7px 7px 0 0;background:linear-gradient(white,#e7ecf3);padding:8px 11px;font-size:11px;color:#344665;font-weight:400}
+.app-workspace.employee-workspace .tabs button.active{border-color:var(--blue);background:linear-gradient(#ff972f,#fff4e8);color:#562600;font-weight:600}
+.app-workspace.employee-workspace .module-heading{font-size:10px;color:#516889;padding:18px 20px 12px}
+.app-workspace.employee-workspace .form-tabs{border-radius:0 0 12px 12px}
+.app-workspace.employee-workspace .repeater-row{background:#fafcff;border:1px solid var(--line);border-radius:8px;padding:18px 18px 42px}
+.app-workspace.employee-workspace .section-heading{margin-bottom:18px}.app-workspace.employee-workspace .section-heading h2{margin:0 0 3px}
+.app-workspace.employee-workspace .detail-grid{background:var(--line);border-color:var(--line);border-radius:8px}.app-workspace.employee-workspace .detail-grid>div{padding:16px}.app-workspace.employee-workspace .detail-grid span{font-size:11px;color:#7c8da5}.app-workspace.employee-workspace .detail-grid strong{font-size:12px;font-weight:500;color:#26374f;overflow-wrap:anywhere}
+.app-workspace.employee-workspace .profile-head{padding:20px 22px;margin-bottom:20px}.app-workspace.employee-workspace .profile-head .avatar{background:#fff0df;color:#c56a16;border-radius:12px}.app-workspace.employee-workspace .profile-head p{font-size:12px}
+.app-workspace.employee-workspace .master-nav{padding:8px;top:84px}.app-workspace.employee-workspace .master-nav a{font-size:12px;padding:10px 12px;color:#465a76;font-weight:500}.app-workspace.employee-workspace .master-nav a.active{background:#fff3e8;color:#d97016}.app-workspace.employee-workspace .master-nav strong{background:#eef3fc;color:#647896;font-size:10px}.app-workspace.employee-workspace .master-table input,.app-workspace.employee-workspace .master-table select{min-width:130px}.app-workspace.employee-workspace .master-table .btn{min-height:32px;padding:6px 10px;font-size:11px}.app-workspace.employee-workspace .master-form{margin-bottom:0}
+.app-workspace.employee-workspace .metric{border:1px solid var(--line);border-radius:12px;background:white;box-shadow:var(--shadow);padding:18px}.app-workspace.employee-workspace .metric span{font-size:11px;color:#70829b}.app-workspace.employee-workspace .metric strong{font-size:28px;font-weight:650;color:#172b46;margin:7px 0}.app-workspace.employee-workspace .metric small{font-size:10px;color:#8a9bb1}.app-workspace.employee-workspace .progress-row{font-size:12px;border-color:var(--line)}.app-workspace.employee-workspace .progress-row i{background:var(--blue)}.app-workspace.employee-workspace .news{border-color:var(--line);font-size:12px}.app-workspace.employee-workspace .news>span{background:#fff3e8;color:#d97016;font-size:11px}.app-workspace.employee-workspace .news p{font-size:12px}
+.app-workspace.employee-workspace .directory-filters{border:1px solid var(--line);box-shadow:var(--shadow)}.app-workspace.employee-workspace .directory-label{font-size:11px}.app-workspace.employee-workspace .directory-count{font-size:11px}.app-workspace.employee-workspace .directory-table td{height:118px;padding:18px 12px}.app-workspace.employee-workspace .directory-table th{height:auto;padding:13px 12px}.app-workspace.employee-workspace .directory-table .person strong{font-size:15px}.app-workspace.employee-workspace .directory-table .person small,.app-workspace.employee-workspace .directory-table td small{font-size:11px}.app-workspace.employee-workspace .directory-table .person>span{width:42px;height:42px;font-size:16px}.app-workspace.employee-workspace .directory-table .badge{font-size:10px}.app-workspace.employee-workspace .directory-table td:nth-child(3) small{font-size:10px}.app-workspace.employee-workspace .directory-filter-foot .chips{font-size:11px}.app-workspace.employee-workspace .filter-results{font-size:12px}.app-workspace.employee-workspace .directory-search input{padding-left:36px}.app-workspace.employee-workspace .directory-search>.ui-icon{top:9px}.app-workspace.employee-workspace .directory-pagination{font-size:11px}
+.app-workspace.employee-workspace .completion-card{font-size:11px}.app-workspace.employee-workspace .reference-form{padding:22px}.app-workspace.employee-workspace .employee-name-inputs{height:36px;border-color:#bac7d8}.app-workspace.employee-workspace .employee-name-inputs input{border:0;min-height:34px!important;height:34px!important;box-shadow:none}.app-workspace.employee-workspace .sticky-actions{left:256px}.app-workspace.employee-workspace .compact-check{border-color:#bac7d8;min-height:36px}.app-workspace.employee-workspace .form-intro h2{font-size:16px}.app-workspace.employee-workspace .form-intro p{font-size:11px}.app-workspace.employee-workspace .reference-section-title{font-size:11px}
+.app-workspace.employee-workspace .pager{padding:16px 20px;border-top:1px solid var(--line);font-size:12px}.app-workspace.employee-workspace .pager a{color:#526987}.app-workspace.employee-workspace .pagination-links .current{color:white;background:var(--blue)}
+.login-page{background:var(--bg)}.login-wrap{border:1px solid var(--line);border-radius:16px;box-shadow:0 12px 40px #182b4610}.login-brand{background:var(--navy);border-right:0;padding:46px}.login-logo{max-width:200px;border-radius:8px}.login-brand h1{font-size:28px}.login-brand p,.login-brand ul{font-size:14px;color:#bfccde}.login-card{padding:46px}.login-card h2{font-size:24px;color:var(--ink)}.login-card .eyebrow{color:#d97016}.login-card label{font-size:12px;font-weight:500;color:#344762}.login-card input{font-size:13px}.login-card .btn{font-size:13px}.login-card .check input{accent-color:var(--blue)}
+@media(max-width:1150px){.app-workspace .metric-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.app-workspace .master-layout{grid-template-columns:210px minmax(0,1fr)}}
+@media(max-width:1000px){.app-workspace .master-layout{grid-template-columns:1fr}.app-workspace.employee-workspace .master-nav{position:static;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.app-workspace .grid-2{grid-template-columns:1fr}.app-workspace .profile-head{flex-wrap:wrap}.app-workspace .profile-head .badge{margin-left:0}}
+@media(max-width:760px){.app-workspace.employee-workspace .app-shell{display:block}.app-workspace.employee-workspace .sidebar{position:fixed;left:-256px;width:256px;z-index:30}.app-workspace.employee-workspace.nav-open .sidebar{left:0}.app-workspace.employee-workspace .topbar{padding:0 16px}.app-workspace.employee-workspace .content{padding:20px 16px 110px}.app-workspace.employee-workspace h1{font-size:22px}.app-workspace.employee-workspace .page-head{align-items:flex-start}.app-workspace.employee-workspace .sticky-actions{left:0}.app-workspace .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.app-workspace .progress-row{grid-template-columns:110px 1fr 30px}.app-workspace.employee-workspace .master-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.app-workspace .profile-head>.badge{margin-left:0}.app-workspace.employee-workspace .card{padding:16px}.app-workspace.employee-workspace .table-card{padding:0}.app-workspace.employee-workspace .employee-name-field{grid-column:auto}.login-card{padding:30px}.app-workspace .directory-page-size{margin-left:0}}
+
+.setup-record { border-top: 1px solid #e2e8f0; }
+.setup-record > summary { cursor: pointer; padding: 18px 24px; }
+.setup-record > summary span { margin-left: 16px; color: #64748b; }
+.master-form select[multiple] { min-height: 110px; }
+
+
+/* Master data record tables and edit dialogs. */
+.master-layout>div{min-width:0}.master-list-scroll{overflow-x:auto;width:100%;margin-top:16px}
+.master-records{width:100%;border-collapse:separate;border-spacing:0;font-size:12px;text-align:left}
+.master-records th{background:#f7f9fc;color:#52637a;font-weight:600;white-space:nowrap;border-bottom:1px solid var(--line);padding:12px 14px}
+.master-records td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;min-width:130px;max-width:300px;overflow-wrap:anywhere}
+.master-records td:first-child{min-width:50px;white-space:nowrap;overflow-wrap:normal}.master-records tbody tr:hover td{background:#fffaf5}
+.master-records .master-actions-column{position:sticky;right:0;background:#fff;box-shadow:-1px 0 var(--line);min-width:155px;z-index:1}
+.master-records th.master-actions-column{background:#f7f9fc}.master-row-actions{display:flex;gap:8px;align-items:center;white-space:nowrap}.master-row-actions form{margin:0}
+.master-empty-value{color:var(--muted)}.master-status{display:inline-block;background:#f1f5f9;border-radius:5px;padding:3px 8px;white-space:nowrap;color:#52637a}.master-status-active{background:#e8f5ee;color:#166534}
+.master-cell-details{min-width:200px;max-width:300px}.master-cell-details summary{cursor:pointer}.master-cell-details div{white-space:pre-wrap;margin-top:8px}
+.master-edit-dialog{border:1px solid var(--line);border-radius:12px;padding:0;width:min(850px,calc(100vw - 32px));max-height:88vh;color:var(--ink);background:#fff;box-shadow:0 20px 80px #10172540}
+.master-edit-dialog::backdrop{background:#10172580}.master-edit-dialog .card-head{position:sticky;top:0;background:#fff;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:16px}.master-edit-dialog .card-head h2{overflow-wrap:anywhere}.master-edit-dialog .form-grid{padding:20px}.master-edit-dialog .form-grid .form-grid{padding:0}.master-edit-dialog .alert{margin:16px}
+.master-records caption.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.app-workspace.employee-workspace .master-edit-dialog .card-head{padding:16px 20px;margin:0;border-bottom:1px solid var(--line)}
+.app-workspace.employee-workspace .master-edit-dialog input[type=checkbox]{min-width:15px}
+@media(max-width:600px){.master-edit-dialog .form-grid{grid-template-columns:1fr}.master-records td,.master-records th{padding:10px}.master-row-actions{gap:5px}}
+
+.department-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;max-height:240px;overflow:auto;border:1px solid var(--line);border-radius:8px;padding:12px}.app-workspace.employee-workspace .department-option{display:flex;align-items:center;gap:8px;margin:0;padding:8px;background:#f7f9fc;border-radius:5px}.app-workspace.employee-workspace .department-option input[type=checkbox]{min-width:16px;width:16px;flex:0 0 16px}

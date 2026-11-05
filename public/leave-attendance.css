@@ -1,0 +1,104 @@
+/* HRLA uses the shared HRIS cards, master forms, tables and pagination. */
+.la-module{min-width:0}
+.la-scroll{max-width:100%;overflow-x:auto}
+.la-form label{min-width:0}
+.la-form :is(input,select,textarea){max-width:100%;min-width:0}
+.la-form input[readonly]{background:var(--bg)}
+.la-identity{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:0 0 16px}
+.la-identity dt{font-size:11px;color:var(--muted)}
+.la-identity dd{margin:6px 0 0;font-size:13px;font-weight:600}
+.la-note{color:var(--muted);font-size:12px;line-height:1.6;margin:12px 0}
+.la-decision{display:grid;gap:8px;min-width:210px}
+.la-decision label{display:grid;gap:5px}
+.app-workspace.employee-workspace .la-decision{margin:0}
+.la-module output{display:block;min-height:30px;padding:5px 8px;border:1px solid #bac7d8;border-radius:4px;background:var(--bg);font-size:12px;line-height:1.35}
+@media(max-width:700px){.la-module .la-identity{grid-template-columns:1fr 1fr}.la-module .form-actions{flex-wrap:wrap}}
+/* Attendance entry and regularization follow the supplied compact screen references. */
+.attendance-page .attendance-title{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.attendance-page .attendance-title h1{margin:0}
+.attendance-tag{display:inline-flex;align-items:center;padding:4px 10px;border-radius:5px;background:#fff0df;color:#b4520c;font-size:11px;font-weight:600;white-space:nowrap}
+.attendance-page .attendance-selector{display:flex;align-items:flex-end;flex-wrap:wrap;gap:12px}
+.attendance-selector label{display:block;min-width:0;font-size:11px;font-weight:500;color:#344762}
+.attendance-selector :is(input,select){display:block;width:100%;margin-top:5px}
+.attendance-selector label:first-of-type{max-width:330px;flex:1 1 230px}
+.attendance-selector label:last-of-type{max-width:185px;flex:0 1 185px}
+.attendance-timezone{margin-left:auto;align-self:center;font-size:11px;color:var(--muted)}
+.attendance-layout{display:grid;grid-template-columns:minmax(0,2.15fr) minmax(270px,1fr);gap:20px;align-items:start}
+.attendance-editor,.attendance-context{min-width:0}
+.attendance-page .attendance-punch-card{padding:24px}
+.attendance-punch-card .card-head{align-items:center;flex-wrap:wrap;gap:10px}
+.attendance-page h2{font-size:16px}
+.attendance-page h2 .ui-icon{width:19px;height:19px;color:#bd681d;vertical-align:middle;margin-right:7px}
+.attendance-state{display:inline-flex;align-items:center;gap:5px;background:#f0f3fc;color:#6a778d;border-radius:20px;padding:5px 10px;font-size:10px;font-weight:600}
+.attendance-punch-actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.attendance-punch-action{display:flex;align-items:center;gap:12px;text-align:left;border:2px solid transparent;border-radius:10px;padding:17px;color:white;cursor:pointer;font:inherit}
+.attendance-punch-action.attendance-in{background:#087650}.attendance-punch-action.attendance-out{background:#b6222b}
+.attendance-punch-action:hover{filter:brightness(1.08)}.attendance-punch-action[aria-pressed=true]{outline:3px solid #f58220;outline-offset:3px}
+.attendance-punch-action:focus-visible{outline:3px solid #172b46;outline-offset:3px}
+.attendance-punch-action strong{display:block;font-size:16px;font-weight:600}.attendance-punch-action small{display:block;margin-top:5px;font-size:11px;color:#ffffffc9}
+.attendance-punch-action>span:last-child{margin-left:auto;font-size:22px;color:#ffffffa0}
+.attendance-action-icon{display:grid;place-items:center;border-radius:7px;background:#ffffff25;width:38px;height:38px;flex-shrink:0}
+.attendance-action-icon .ui-icon{width:23px;height:23px}
+.attendance-section-title{display:flex;align-items:center;gap:10px;margin:24px 0 18px}
+.attendance-section-title>span{height:16px;width:3px;background:var(--blue);border-radius:2px}
+.attendance-section-title h3{margin:0;font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#344762;white-space:nowrap}
+.attendance-section-title::after{content:'';height:1px;background:var(--line);flex:1}
+.app-workspace.employee-workspace .attendance-page .attendance-fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px;margin-bottom:0}
+.app-workspace.employee-workspace .attendance-page .attendance-fields>label{grid-column:span 1;font-size:11px;min-width:0}
+.app-workspace.employee-workspace .attendance-page .attendance-fields>.wide{grid-column:1/-1}
+.app-workspace.employee-workspace .attendance-page .attendance-fields :is(input,select){height:38px;min-height:38px;max-width:100%;width:100%;margin-top:7px}
+.app-workspace.employee-workspace .attendance-page .attendance-fields textarea{width:100%;max-width:100%;height:88px;margin-top:7px;padding:10px 12px;line-height:1.6}
+.attendance-fields input[readonly]{background:#f0f3fc;border-color:#f0f3fc}
+.attendance-page .attendance-fields output{display:flex;align-items:center;height:38px;margin-top:7px;border:1px solid #d8e8df;border-radius:4px;background:#edf8f2;color:#136644;font-size:12px;padding:8px 10px}
+.attendance-fields small{display:block;font-size:10px;line-height:1.5;color:var(--muted);margin-top:6px}
+.attendance-fields small strong{font-weight:500;color:#52637a}
+.attendance-required{color:var(--red)}
+.attendance-page .attendance-savebar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px}
+.attendance-savebar>div{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.attendance-save-state{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:11px;line-height:1.6}
+.attendance-save-state i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#df9916;flex-shrink:0}
+.attendance-profile-head{display:flex;align-items:center;gap:12px;min-width:0}
+.attendance-avatar{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#9e4d0b;color:white;font-weight:600;font-size:21px;flex-shrink:0}
+.attendance-profile-head h2{margin:0 0 4px;overflow-wrap:anywhere}.attendance-profile-head p{font-size:11px;margin:0 0 7px;color:var(--muted);line-height:1.5}
+.attendance-employee-code{display:inline-block;background:#eef1ff;color:#53648b;border-radius:4px;padding:3px 7px;font-size:10px;letter-spacing:.03em}
+.attendance-profile-details{margin:18px 0 0;padding:12px;background:#f3f5fc;border-radius:7px;display:grid;gap:10px}
+.attendance-profile-details>div{display:flex;gap:12px;justify-content:space-between;font-size:11px;line-height:1.5}
+.attendance-profile-details dt{color:var(--muted);flex-shrink:0}.attendance-profile-details dd{margin:0;text-align:right;color:#344762;font-weight:600;overflow-wrap:anywhere;min-width:0}
+.attendance-location .card-head h2{font-size:13px}.attendance-location .card-head{flex-wrap:wrap}
+.attendance-location-visual{display:flex;align-items:center;flex-direction:column;justify-content:center;gap:12px;min-height:125px;border-radius:8px;padding:18px;background:linear-gradient(135deg,#eef3f8,#f6f1eb);color:#52637a;text-align:center}
+.attendance-location-visual>span{width:42px;height:42px;border-radius:50%;background:#fff3e4;display:grid;place-items:center;color:#db721a}
+.attendance-location-visual .ui-icon{width:24px;height:24px}.attendance-location-visual strong{font-size:12px;font-weight:600}
+.attendance-recent .card-head{flex-wrap:wrap;align-items:center}.attendance-recent .card-head p{margin:5px 0 0;color:var(--muted);font-size:11px}
+.attendance-time-in{color:#087650;font-weight:600}
+.attendance-page .attendance-recent .master-records th{white-space:normal}.attendance-page .attendance-recent .master-records td{vertical-align:middle}
+@media(max-width:1150px){.attendance-layout{grid-template-columns:minmax(0,1fr) 270px;gap:14px}.attendance-punch-actions{gap:10px}.attendance-punch-action{padding:12px;gap:8px}.attendance-punch-action strong{font-size:13px}.attendance-action-icon{width:30px;height:30px}.attendance-punch-action>span:last-child{display:none}.attendance-page .attendance-savebar{flex-wrap:wrap}.attendance-savebar>div{margin-left:auto}}
+@media(max-width:1000px){.attendance-layout{grid-template-columns:minmax(0,1fr)}.attendance-context{display:grid;grid-template-columns:1fr 1fr;gap:14px}.attendance-page .attendance-punch-card{padding:20px}}
+@media(max-width:600px){.attendance-context{grid-template-columns:1fr;gap:0}.attendance-page .attendance-punch-card{padding:16px}.attendance-timezone{margin-left:0;width:100%}.attendance-selector label:first-of-type,.attendance-selector label:last-of-type{max-width:100%;flex:1 1 150px}.attendance-page-head>.btn{align-self:flex-start}.attendance-punch-action{flex-wrap:wrap;padding:12px 10px}.attendance-punch-action strong{font-size:13px}.attendance-punch-action small{font-size:10px}.attendance-action-icon{display:none}.attendance-page .attendance-savebar{padding:14px}.attendance-savebar>div{width:100%;margin-left:0}.attendance-savebar .btn{flex:1;justify-content:center}.app-workspace.employee-workspace .attendance-page .attendance-fields{grid-template-columns:minmax(0,1fr);gap:16px}.app-workspace.employee-workspace .attendance-page .attendance-fields>label{grid-column:1/-1}.attendance-profile-head h2{font-size:16px}}
+/* Match control heights despite the shared compact-form input selectors. */
+.app-workspace.employee-workspace .attendance-page .attendance-fields input:not([type=checkbox]):not([type=hidden]):not([type=file]),
+.app-workspace.employee-workspace .attendance-page .attendance-fields select{height:38px;min-height:38px}
+.la-module .hrla-datetime-input{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;min-width:0}.la-module .hrla-datetime-input label{display:block;min-width:0;font-size:11px}.la-module .attendance-punch-input{min-width:0}.la-module .hrla-datetime-input input[type=text]{text-transform:uppercase}@media(max-width:420px){.la-module .hrla-datetime-input{grid-template-columns:minmax(0,1fr)}}
+.app-workspace.employee-workspace .hrla-clock-field{font-size:11px;color:#526276;min-width:0}.app-workspace.employee-workspace .hrla-clock{display:flex;align-items:center;gap:2px;width:100%;max-width:190px;height:38px;margin-top:7px;padding:0 5px;border:1px solid #b9c8e1;border-radius:4px;background:white}.app-workspace.employee-workspace .hrla-clock:focus-within{border-color:#f58220;box-shadow:0 0 0 1px #f58220}.app-workspace.employee-workspace .hrla-clock input[type=number],.app-workspace.employee-workspace .hrla-clock select{height:34px!important;min-height:0!important;margin:0!important;border:0!important;box-shadow:none!important;background:transparent!important;font-size:12px;padding:0 3px!important}.app-workspace.employee-workspace .hrla-clock input[type=number]{flex:1 1 40px;width:40px!important;min-width:0;text-align:center}.app-workspace.employee-workspace .hrla-clock select{flex:0 0 58px;width:58px!important;min-width:58px;padding-right:17px!important}.hrla-clock-colon{font-weight:600;color:#526276}.hrla-clock-field>span{display:block}
+.la-module .master-status.attendance-status {font-weight:600;border:1px solid transparent;background:#e2e8f0;color:#475569}
+.la-module .attendance-status[data-status="On Time"] {background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.la-module .attendance-status[data-status="Absent"] {background:#fee2e2;color:#991b1b;border-color:#fecaca}
+.la-module .attendance-status[data-status="In progress / future"] {background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.la-module .attendance-status[data-status*="Early off"],.la-module .attendance-status[data-status="Missing Time In"],.la-module .attendance-status[data-status="Missing Time Out"] {background:#fef3c7;color:#854d0e;border-color:#fde68a}
+.la-module .attendance-status[data-status*="Late"] {background:#ffedd5;color:#9a3412;border-color:#fed7aa}
+.la-module .attendance-status[data-status="Leave"] {background:#ede9fe;color:#5b21b6;border-color:#ddd6fe}
+.la-module .attendance-status[data-status="Day off"] {background:#e2e8f0;color:#475569;border-color:#cbd5e1}
+.la-module .attendance-status[data-status="Missing shift configuration"] {background:#ffe4e6;color:#9f1239;border-color:#fecdd3}
+.attendance-register .attendance-punch-clock {white-space:nowrap}
+.attendance-register .master-records .master-actions-column {position:sticky;right:0;z-index:2;background:#fff;box-shadow:-2px 0 4px #0f172a12}
+.attendance-register .master-records th.master-actions-column {z-index:3;background:#eef3ff}
+.app-workspace.employee-workspace .attendance-register .master-records :is(th,td) {padding:6px 8px;min-width:0;max-width:none;font-size:12px;line-height:1.4}
+.app-workspace.employee-workspace .attendance-register .master-records th {padding:8px;font-size:10px;white-space:normal}
+.app-workspace.employee-workspace .attendance-register .master-records :is(th,td):first-child {min-width:145px;max-width:180px;white-space:normal;overflow-wrap:break-word}
+.app-workspace.employee-workspace .attendance-register .master-records :is(th,td):nth-child(2),.app-workspace.employee-workspace .attendance-register .master-records :is(th,td):nth-child(4),.app-workspace.employee-workspace .attendance-register .master-records :is(th,td):nth-child(14) {min-width:95px;max-width:140px;overflow-wrap:break-word}
+.app-workspace.employee-workspace .attendance-register .master-records :is(th,td):nth-child(3) {min-width:90px;white-space:nowrap}
+.app-workspace.employee-workspace .attendance-register .master-records .attendance-punch-clock {min-width:76px;width:1%;white-space:nowrap}
+.app-workspace.employee-workspace .attendance-register .master-records :is(th,td):nth-child(10),.app-workspace.employee-workspace .attendance-register .master-records :is(th,td):nth-child(11),.app-workspace.employee-workspace .attendance-register .master-records :is(th,td):nth-child(12) {min-width:72px;width:1%;white-space:nowrap}
+.app-workspace.employee-workspace .attendance-register .master-records :is(th,td):nth-child(13) {min-width:125px;max-width:150px}
+.app-workspace.employee-workspace .attendance-register .master-records .master-actions-column {min-width:120px;width:120px;white-space:nowrap}
+.attendance-register .master-row-actions {gap:5px}.attendance-register .master-row-actions .btn {padding:4px 7px;font-size:11px;min-height:27px;line-height:1.4}.attendance-register .attendance-status {padding:2px 6px;font-size:11px}
+.register-filter-field {min-width:0;font-size:12px;color:#334155;font-weight:500}.register-filter-field>span {display:block;margin-bottom:7px}.register-multiselect {position:relative;font-weight:400}.register-multiselect>summary {display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;min-height:36px;padding:8px 12px;border:1px solid #cbd5e1;border-radius:6px;background:#fbfcfe;cursor:pointer;box-sizing:border-box}.register-multiselect>summary::-webkit-details-marker {display:none}.register-multiselect>summary:focus-visible {outline:2px solid #fb923c;outline-offset:2px}.register-multiselect>summary [data-filter-summary] {min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.register-multiselect[open] {z-index:20}.register-filter-popup {position:absolute;left:0;right:0;top:calc(100% + 4px);min-width:220px;max-width:calc(100vw - 40px);padding:10px;border:1px solid #cbd5e1;border-radius:6px;background:#fff;box-shadow:0 8px 24px #0f172a26;z-index:20}.register-filter-options {max-height:240px;overflow:auto;margin-top:8px}.app-workspace.employee-workspace .register-filter-options label {display:flex;align-items:center;gap:8px;padding:7px 4px;margin:0;font-weight:400;cursor:pointer;line-height:1.4}.register-filter-options label:hover {background:#fff7ed}.register-filter-options input[type=checkbox] {width:15px;min-width:15px;height:15px;margin:0;accent-color:#ea580c;flex:none}.register-filter-tools {display:flex;justify-content:space-between;margin:7px 0}.register-filter-tools button {border:0;background:transparent;color:#9a3412;font:inherit;font-size:11px;padding:4px;cursor:pointer}.register-filter-popup [hidden] {display:none!important}.register-filter-popup>p {font-size:11px;color:#64748b}

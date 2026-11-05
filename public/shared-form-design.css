@@ -1,0 +1,217 @@
+/* Shared form design taken from Employee Information. Loaded after module styles.
+   Employee create/edit keeps its reference layout; this extends its visual tokens
+   to HRIS/HRLA setup, dialogs, filters, exit records, approvals and authentication. */
+.form-ui-theme {
+    --form-ink:#334155;
+    --form-muted:#718096;
+    --form-line:#cbd5e1;
+    --form-card-line:#dce5f0;
+    --form-fill:#fbfcfe;
+    --form-accent:#f97316;
+}
+
+/* Cards and section headings */
+.app-workspace.employee-workspace.form-ui-theme .content :is(.master-layout>div>.card,.exit-records,.attendance-punch-card,.attendance-profile,.attendance-location,form.card) {
+    background:#fff;
+    border:1px solid var(--form-card-line);
+    border-radius:9px;
+    box-shadow:0 1px 2px #0f172a05;
+    padding:16px;
+    margin-bottom:14px;
+    min-width:0;
+}
+.app-workspace.employee-workspace.form-ui-theme .content :is(.master-layout,.exit-records,.attendance-editor,.attendance-context) :is(.card-head,.section-heading) {
+    padding:0 0 11px;
+    margin:0 0 14px;
+    border:0;
+    border-bottom:1px solid #edf2f7;
+    gap:12px;
+}
+.app-workspace.employee-workspace.form-ui-theme .content :is(.master-layout,.exit-records,.attendance-editor,.attendance-context) :is(.card-head,.section-heading) h2,
+.app-workspace.employee-workspace.form-ui-theme .shared-form-title {
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin:0;
+    color:#1e293b;
+    font-size:13px;
+    font-weight:700;
+    line-height:1.4;
+    letter-spacing:.035em;
+    text-transform:uppercase;
+}
+.app-workspace.employee-workspace.form-ui-theme .content :is(.master-layout,.exit-records,.attendance-editor,.attendance-context) :is(.card-head,.section-heading) h2::before,
+.app-workspace.employee-workspace.form-ui-theme .shared-form-title::before {
+    content:'';
+    display:block;
+    width:8px;
+    height:8px;
+    flex:0 0 8px;
+    border-radius:50%;
+    background:var(--form-accent);
+}
+.app-workspace.employee-workspace.form-ui-theme .content :is(.master-layout,.exit-records,.attendance-editor,.attendance-context) :is(.card-head,.section-heading) h2>.ui-icon {display:none}
+.app-workspace.employee-workspace.form-ui-theme .shared-form-title {padding-bottom:11px;border-bottom:1px solid #edf2f7}
+.app-workspace.employee-workspace.form-ui-theme .content :is(.card-head,.section-heading) p {font-size:11px;color:var(--form-muted);line-height:1.5;margin:4px 0 0}
+
+/* The reference's four-column grid, including all setup field sizes and dialogs. */
+.app-workspace.employee-workspace.form-ui-theme .content :where(form):not(.employee-form) .form-grid,
+.app-workspace.employee-workspace.form-ui-theme .content :where(form).form-grid:not(.employee-form) {
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    align-items:start;
+    gap:14px 16px;
+    margin-bottom:12px;
+}
+.app-workspace.employee-workspace.form-ui-theme .content .master-layout .master-form {padding:0}
+.app-workspace.employee-workspace.form-ui-theme .content :where(form):not(.employee-form) .form-grid>:where(label),
+.app-workspace.employee-workspace.form-ui-theme .content :where(form).form-grid:not(.employee-form)>:where(label),
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) :is(.field-short,.field-medium,.hrla-clock-field) {grid-column:span 1;min-width:0}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) .field-long {grid-column:span 2;min-width:0}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) :is(.wide,.field-full) {grid-column:1/-1}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) label,
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) .hrla-clock-field {
+    color:var(--form-ink);
+    font-size:12px;
+    font-weight:500;
+    line-height:1.4;
+    min-width:0;
+}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) :is(input:not([type=hidden]):not([type=checkbox]):not([type=radio]):not([type=file]),select) {
+    width:100%;
+    max-width:none;
+    height:36px;
+    min-height:36px;
+    margin-top:5px;
+    padding:7px 10px;
+    font:inherit;
+    font-size:12px;
+    line-height:1.4;
+    border:1px solid var(--form-line);
+    border-radius:6px;
+    background:var(--form-fill);
+    color:var(--form-ink);
+    box-shadow:0 1px 2px #0f172a03;
+}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) textarea {
+    width:100%;
+    max-width:none;
+    height:66px;
+    min-height:66px;
+    margin-top:5px;
+    padding:9px 10px;
+    font:inherit;
+    font-size:12px;
+    line-height:1.5;
+    color:var(--form-ink);
+    border:1px solid var(--form-line);
+    border-radius:6px;
+    background:var(--form-fill);
+    resize:vertical;
+}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) select[multiple] {height:auto;min-height:108px}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) :is(input,select,textarea):focus-visible {outline:0;border-color:var(--form-accent);box-shadow:0 0 0 2px #ffedd5}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) input[readonly] {background:#f1f5f9;color:#64748b}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) :is(input,select,textarea):disabled {opacity:.65;cursor:not-allowed}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) :is(input[type=checkbox],input[type=radio]) {accent-color:var(--form-accent);flex-shrink:0}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) input[type=file] {display:block;max-width:100%;width:100%;min-height:36px;margin-top:5px;padding:5px;border:1px solid var(--form-line);border-radius:6px;background:var(--form-fill);font-size:11px;color:#64748b}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) input[type=file]::file-selector-button {padding:3px 7px;margin-right:7px;border:1px solid var(--form-line);border-radius:4px;background:white;color:#405c7a;cursor:pointer}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) small {font-size:10px;color:#94a3b8;font-weight:400;line-height:1.5}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) output {min-height:36px;padding:8px 10px;margin-top:5px;border:1px solid #d8e8df;border-radius:6px;font-size:12px}
+
+/* Search/filter rows retain their existing structure and responsive wrapping. */
+.app-workspace.employee-workspace.form-ui-theme .content .master-table>form.master-form {display:flex;align-items:flex-end;flex-wrap:wrap;gap:12px 16px}
+.app-workspace.employee-workspace.form-ui-theme .content .master-table>form.master-form>label {flex:0 1 280px;width:280px;max-width:100%}
+.app-workspace.employee-workspace.form-ui-theme .content .master-table>form.master-form>.form-actions {margin:0;padding:0;border:0}
+.app-workspace.employee-workspace.form-ui-theme .content .directory-search input {margin-top:0;padding-left:36px}
+.app-workspace.employee-workspace.form-ui-theme .content .directory-search>.ui-icon {top:50%;transform:translateY(-50%)}
+.app-workspace.employee-workspace.form-ui-theme .content .directory-filter-grid>select {margin-top:0}
+
+/* Footer actions and buttons match Employee Information. */
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) .form-actions {display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px;padding:12px 0 0;margin-top:2px;border-top:1px solid #edf2f7}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) .btn {min-height:34px;padding:7px 14px;border-radius:6px;font-size:12px;line-height:1.4}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) .btn.primary {background:#ea580c;border-color:#ea580c;color:#fff}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) .btn.primary:hover {background:#c2410c;border-color:#c2410c}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) .btn:focus-visible {outline:2px solid var(--form-accent);outline-offset:3px}
+.app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) .btn.danger {background:#fff1f2;border-color:#fecdd3;color:#b43d48}
+.app-workspace.employee-workspace.form-ui-theme .content .attendance-savebar {position:static;border:1px solid var(--form-card-line);border-radius:9px;background:#fff;box-shadow:0 -1px 4px #0f172a04}
+.app-workspace.employee-workspace.form-ui-theme .content .exit-records .repeater-row {padding:14px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:7px;background:#fff}
+.app-workspace.employee-workspace.form-ui-theme .content .exit-records .repeater-row {display:flex;flex-direction:column;gap:12px}
+.app-workspace.employee-workspace.form-ui-theme .content .exit-records .repeater-row>.form-grid {margin:0}
+.app-workspace.employee-workspace.form-ui-theme .content .exit-records .remove-row {position:static;align-self:flex-end;min-height:28px;padding:4px 10px;border:1px solid #fecdd3;border-radius:5px;background:#fff1f2;color:#b43d48;font-size:11px;cursor:pointer}
+.app-workspace.employee-workspace.form-ui-theme .content form.form-grid>.form-actions:not(.wide) {align-self:end;padding-top:0;border-top:0}
+.app-workspace.employee-workspace.form-ui-theme .content .master-form>.wide>h3 {display:flex;align-items:center;gap:9px;margin:4px 0 12px;padding-bottom:11px;border-bottom:1px solid #edf2f7;font-size:12px;font-weight:700;color:#334155;text-transform:uppercase;letter-spacing:.025em}
+.app-workspace.employee-workspace.form-ui-theme .content .master-form>.wide>h3::before {content:'';width:8px;height:8px;flex:0 0 8px;border-radius:50%;background:var(--form-accent)}
+
+/* Edit dialogs are the same form surface, with their own scroll and save row. */
+.app-workspace.employee-workspace.form-ui-theme .master-edit-dialog {width:min(1100px,calc(100vw - 28px));max-height:85vh;padding:0;border:1px solid var(--form-card-line);border-radius:10px;color:var(--form-ink);background:white;box-shadow:0 20px 70px #0f172a35}
+.app-workspace.employee-workspace.form-ui-theme .master-edit-dialog::backdrop {background:#0f172a80}
+.app-workspace.employee-workspace.form-ui-theme .content .master-edit-dialog>.card-head {padding:16px;margin:0}
+.app-workspace.employee-workspace.form-ui-theme .content .master-edit-dialog form.master-form {padding:16px;margin:0}
+.app-workspace.employee-workspace.form-ui-theme .content .master-edit-dialog .form-grid .form-grid {padding:0}
+.app-workspace.employee-workspace.form-ui-theme .content .master-edit-dialog .form-actions {position:static;padding:12px 0 0;background:#fff}
+
+/* Keep the deliberate two-column punch layout inside its narrower editor. */
+.app-workspace.employee-workspace.form-ui-theme .content .attendance-editor .form-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+.app-workspace.employee-workspace.form-ui-theme .content .attendance-editor .form-grid>.attendance-punch-input {grid-column:span 1}
+.app-workspace.employee-workspace.form-ui-theme .content .attendance-section-title {margin:20px 0 14px;padding-bottom:11px;border-bottom:1px solid #edf2f7}
+.app-workspace.employee-workspace.form-ui-theme .content .attendance-section-title>span {width:8px;height:8px;border-radius:50%;background:var(--form-accent)}
+.app-workspace.employee-workspace.form-ui-theme .content .attendance-section-title h3 {font-size:13px;color:#1e293b;font-weight:700;letter-spacing:.035em}
+.app-workspace.employee-workspace.form-ui-theme .content .hrla-datetime-input {grid-template-columns:1fr;gap:10px}
+.app-workspace.employee-workspace.form-ui-theme .content .hrla-clock {height:36px;width:100%;max-width:none;margin-top:5px;border-color:var(--form-line);border-radius:6px;background:var(--form-fill);box-shadow:0 1px 2px #0f172a03}
+.app-workspace.employee-workspace.form-ui-theme .content .hrla-clock input[type=number],
+.app-workspace.employee-workspace.form-ui-theme .content .hrla-clock select {height:32px!important;min-height:0!important;border:0!important;border-radius:4px!important;margin:0!important;padding:0 3px!important;box-shadow:none!important;background:transparent!important}
+.app-workspace.employee-workspace.form-ui-theme .content .hrla-clock input[type=number] {width:40px!important;min-width:0;max-width:none;flex:1 1 40px;text-align:center}
+.app-workspace.employee-workspace.form-ui-theme .content .hrla-clock select {width:60px!important;min-width:60px;flex:0 0 60px;padding-right:17px!important}
+.app-workspace.employee-workspace.form-ui-theme .content .hrla-clock:focus-within {border-color:var(--form-accent);box-shadow:0 0 0 2px #ffedd5}
+
+/* Keep employee-selection checkboxes within their narrow table column. */
+.app-workspace.employee-workspace .policy-allowance-table :is(th,td) {min-width:80px;white-space:normal}
+.app-workspace.employee-workspace .policy-allowance-table :is(th,td):first-child {min-width:180px;white-space:normal}
+.app-workspace.employee-workspace .policy-allowance-table small {display:inline-block;margin-top:5px;color:#718096;font-size:10px}
+@media(max-width:600px) {.app-workspace.employee-workspace .policy-allowance-table .master-actions-column {position:static;box-shadow:none}}
+.holiday-date-control {position:relative}
+.app-workspace.employee-workspace.form-ui-theme .content .holiday-date-control input {padding-right:38px}
+.holiday-date-toggle {position:absolute;right:1px;top:6px;width:34px;height:34px;display:grid;place-items:center;padding:0;border:0;border-radius:5px;background:transparent;color:#475569;cursor:pointer}
+.holiday-date-toggle:focus-visible {outline:2px solid #f97316;outline-offset:-2px}
+.holiday-date-picker {position:fixed;inset:auto;margin:0;width:272px;max-width:calc(100vw - 16px);max-height:calc(100vh - 16px);overflow-y:auto;padding:12px;border:1px solid #dce5f0;border-radius:10px;background:#fff;color:#334155;box-shadow:0 8px 32px #0f172a26;font:12px/1.4 Inter,'Segoe UI',Arial,sans-serif}
+.holiday-date-picker .holiday-picker-heading {display:grid;grid-template-columns:30px 1fr 30px;align-items:center;gap:8px;margin-bottom:10px}
+.app-workspace.employee-workspace.form-ui-theme .content .holiday-date-picker select {min-width:0;width:100%;height:32px;min-height:32px;margin:0;padding:4px 8px;border:1px solid #cbd5e1;border-radius:6px;background:#fbfcfe;color:#334155}
+.holiday-picker-days {display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+.holiday-date-picker button {min-width:0;min-height:30px;padding:4px;border:0;border-radius:5px;background:#fff;color:#334155;font:inherit;cursor:pointer}
+.holiday-date-picker button:hover,.holiday-date-picker button:focus-visible {outline:0;background:#fff3e8;color:#c2410c;box-shadow:inset 0 0 0 1px #fb923c}
+.holiday-date-picker button[aria-pressed=true] {background:#ea580c;color:#fff}
+.holiday-date-picker p {margin:10px 0 0;font-size:11px;color:#718096;text-align:center}
+.app-workspace.employee-workspace .shift-assignment-employees :is(th,td) {min-width:100px;white-space:normal}
+.app-workspace.employee-workspace .shift-assignment-employees :is(th,td):first-child {width:40px;min-width:40px;max-width:40px;text-align:center}
+.app-workspace.employee-workspace .shift-assignment-employees input[type=checkbox] {width:16px;min-width:16px;max-width:16px;height:16px;margin:0;accent-color:var(--form-accent)}
+/* Login uses the same fields and section typography without workspace navigation. */
+.form-ui-theme.form-ui-auth .login-card {background:white;padding:40px;border-left:1px solid var(--form-card-line)}
+.form-ui-theme.form-ui-auth .login-card h2 {display:flex;align-items:center;gap:9px;font-size:18px;color:#1e293b}
+.form-ui-theme.form-ui-auth .login-card h2::before {content:'';width:8px;height:8px;flex:0 0 8px;border-radius:50%;background:var(--form-accent)}
+.form-ui-theme.form-ui-auth .login-card label {font-size:12px;color:var(--form-ink);font-weight:500;margin:18px 0}
+.form-ui-theme.form-ui-auth .login-card input:not([type=checkbox]) {height:36px;margin-top:5px;border:1px solid var(--form-line);border-radius:6px;padding:7px 10px;background:var(--form-fill);font-size:12px;color:var(--form-ink)}
+.form-ui-theme.form-ui-auth .login-card input:focus-visible {outline:0;border-color:var(--form-accent);box-shadow:0 0 0 2px #ffedd5}
+.form-ui-theme.form-ui-auth .login-card .btn {min-height:36px;border-radius:6px;background:#ea580c;border-color:#ea580c;font-size:12px}
+.form-ui-theme.form-ui-auth .login-card input[type=checkbox] {accent-color:var(--form-accent)}
+
+@media(max-width:1200px) {
+    .app-workspace.employee-workspace.form-ui-theme .content :where(form):not(.employee-form) .form-grid,
+    .app-workspace.employee-workspace.form-ui-theme .content :where(form).form-grid:not(.employee-form) {grid-template-columns:repeat(3,minmax(0,1fr))}
+    .app-workspace.employee-workspace.form-ui-theme .content .attendance-editor .form-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:900px) {
+    .app-workspace.employee-workspace.form-ui-theme .content :where(form):not(.employee-form) .form-grid,
+    .app-workspace.employee-workspace.form-ui-theme .content :where(form).form-grid:not(.employee-form) {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px) {
+    .app-workspace.employee-workspace.form-ui-theme .content :where(form):not(.employee-form) .form-grid,
+    .app-workspace.employee-workspace.form-ui-theme .content :where(form).form-grid:not(.employee-form),
+    .app-workspace.employee-workspace.form-ui-theme .content .attendance-editor .form-grid {grid-template-columns:minmax(0,1fr);gap:12px}
+    .app-workspace.employee-workspace.form-ui-theme .content form:not(.employee-form) :is(.field-short,.field-medium,.field-long,.wide,.field-full,.attendance-punch-input) {grid-column:1/-1}
+    .app-workspace.employee-workspace.form-ui-theme .content :is(.master-layout>div>.card,.exit-records,.attendance-punch-card,.attendance-profile,.attendance-location,form.card) {padding:12px}
+    .app-workspace.employee-workspace.form-ui-theme .content .master-edit-dialog form.master-form {padding:12px}
+    .app-workspace.employee-workspace.form-ui-theme .content :is(.card-head,.section-heading) {flex-wrap:wrap}
+    .app-workspace.employee-workspace.form-ui-theme .content .form-actions .btn {flex:0 1 auto}
+    .form-ui-theme.form-ui-auth .login-card {padding:28px;border-left:0}
+}

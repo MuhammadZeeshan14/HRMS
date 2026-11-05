@@ -1,0 +1,1967 @@
+{
+  "source": "A Hamson Setup Data.xlsx",
+  "sha256": "d5347550df06ee054b9e35437ed150cb52016a98bddfa980c2189991dab7531e",
+  "tables": {
+    "banks": [
+      {
+        "sheet": "Bank",
+        "row": 1,
+        "data": {
+          "code": "HBL",
+          "name": "Habib Bank Limited",
+          "description": "Company A/c"
+        }
+      }
+    ],
+    "branches": [
+      {
+        "sheet": "Branch",
+        "row": 2,
+        "data": {
+          "code": "HBL",
+          "name": "G-10 Branch, Islamabad",
+          "bank_code": "HBL"
+        }
+      }
+    ],
+    "companies": [
+      {
+        "sheet": "Company",
+        "row": 2,
+        "data": {
+          "code": "03",
+          "name": "A Hamson (Pvt) Limited",
+          "address": "39-K Block 6, P.E.C.H.S., Karachi",
+          "website": "www.ahamson.com",
+          "phone": "92 51 2818094",
+          "fax": null,
+          "ntn": null,
+          "bank_code": "HBL",
+          "branch_code": "HBL",
+          "account_no": null
+        }
+      }
+    ],
+    "locations": [
+      {
+        "sheet": "Location",
+        "row": 2,
+        "data": {
+          "code": "1",
+          "name": "Corporate Office",
+          "company_code": "03",
+          "phone": "92 51 2818094",
+          "fax": null,
+          "address": "Twelve, 3rd Floor, Al-Baber Center, F-8 Markaz, Islamabad"
+        }
+      }
+    ],
+    "departments": [
+      {
+        "sheet": "Department Hierarchy",
+        "row": 2,
+        "data": {
+          "code": "1",
+          "name": "Dev Ops.",
+          "level": "1",
+          "parent_department_code": null,
+          "company_code": "03"
+        }
+      },
+      {
+        "sheet": "Department Hierarchy",
+        "row": 3,
+        "data": {
+          "code": "2",
+          "name": "Sub-Department",
+          "level": "2",
+          "parent_department_code": "1",
+          "company_code": "03"
+        }
+      }
+    ],
+    "grades": [
+      {
+        "sheet": "Grade",
+        "row": 2,
+        "data": {
+          "code": "1",
+          "name": "M1",
+          "description": "CEO",
+          "company_code": "03",
+          "rank": "1",
+          "reference_titles": "CEO"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 3,
+        "data": {
+          "code": "2",
+          "name": "M2",
+          "description": "Executive Director",
+          "company_code": "03",
+          "rank": "2",
+          "reference_titles": "Executive Director / Director"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 4,
+        "data": {
+          "code": "3",
+          "name": "M3",
+          "description": "EVP",
+          "company_code": "03",
+          "rank": "3",
+          "reference_titles": "EVP / CxO"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 5,
+        "data": {
+          "code": "4",
+          "name": "M4",
+          "description": "Vice President",
+          "company_code": "03",
+          "rank": "4",
+          "reference_titles": "Vice President / Senior Solution Architect / Senior Program Manager"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 6,
+        "data": {
+          "code": "5",
+          "name": "E1",
+          "description": "General Manager",
+          "company_code": "03",
+          "rank": "5",
+          "reference_titles": "General Manager / Solution Architect / Program Manager"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 7,
+        "data": {
+          "code": "6",
+          "name": "E2",
+          "description": "Senior Manager",
+          "company_code": "03",
+          "rank": "6",
+          "reference_titles": "Senior Manager / Senior Consultant / Senior Project Manager / Senior Lead"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 8,
+        "data": {
+          "code": "7",
+          "name": "E3",
+          "description": "Manager",
+          "company_code": "03",
+          "rank": "7",
+          "reference_titles": "Manager / Consultant / Project Manager / Lead Engineer"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 9,
+        "data": {
+          "code": "8",
+          "name": "E4",
+          "description": "Assistant Manager",
+          "company_code": "03",
+          "rank": "8",
+          "reference_titles": "Assistant Manager / Account Manager / Associate Project manager / Associate Product Manager / Senior Engineer"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 10,
+        "data": {
+          "code": "9",
+          "name": "E5",
+          "description": "Management Trainee Officer / Technical Trainee Officer",
+          "company_code": "03",
+          "rank": "9",
+          "reference_titles": "Management Trainee Officer / Technical Trainee Officer / Sales Account Executive / Engineer"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 11,
+        "data": {
+          "code": "10",
+          "name": "E6",
+          "description": "Senior Executive",
+          "company_code": "03",
+          "rank": "10",
+          "reference_titles": "Senior Executive / Senior Coordinator / Associate Engineer"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 12,
+        "data": {
+          "code": "11",
+          "name": "E7",
+          "description": "Executive",
+          "company_code": "03",
+          "rank": "11",
+          "reference_titles": "Executive / Coordinator / Intern"
+        }
+      },
+      {
+        "sheet": "Grade",
+        "row": 13,
+        "data": {
+          "code": "12",
+          "name": "N1",
+          "description": "Non-Management Staff (NMS)",
+          "company_code": "03",
+          "rank": "12",
+          "reference_titles": "Non-Management Staff (NMS)"
+        }
+      }
+    ],
+    "qualifications": [
+      {
+        "sheet": "Qualification",
+        "row": 2,
+        "data": {
+          "code": "1",
+          "name": "Middle",
+          "description": "Under Matric",
+          "level": "1"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 3,
+        "data": {
+          "code": "2",
+          "name": "S.S.C",
+          "description": "Matriculation",
+          "level": "2"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 4,
+        "data": {
+          "code": "3",
+          "name": "O Level",
+          "description": "Ordinary Level",
+          "level": "2"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 5,
+        "data": {
+          "code": "4",
+          "name": "H.S.C",
+          "description": "Intermediate",
+          "level": "3"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 6,
+        "data": {
+          "code": "5",
+          "name": "F.A",
+          "description": "Intermediate",
+          "level": "3"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 7,
+        "data": {
+          "code": "6",
+          "name": "F.A (Army ISCA)",
+          "description": "Intermediate",
+          "level": "3"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 8,
+        "data": {
+          "code": "7",
+          "name": "F.Sc",
+          "description": "Intermediate",
+          "level": "3"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 9,
+        "data": {
+          "code": "8",
+          "name": "A Level",
+          "description": "Advance Level",
+          "level": "3"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 10,
+        "data": {
+          "code": "9",
+          "name": "Diploma",
+          "description": "Diploma",
+          "level": "3"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 11,
+        "data": {
+          "code": "10",
+          "name": "B.A",
+          "description": "Bachelors of Arts",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 12,
+        "data": {
+          "code": "11",
+          "name": "B.Com",
+          "description": "Bachelors of Commerce",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 13,
+        "data": {
+          "code": "12",
+          "name": "B.Sc (Hons)",
+          "description": "Bachelors of Science (Honours)",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 14,
+        "data": {
+          "code": "13",
+          "name": "B.Sc",
+          "description": "Bachelors of Science",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 15,
+        "data": {
+          "code": "14",
+          "name": "BS",
+          "description": "Bachelors of Science",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 16,
+        "data": {
+          "code": "15",
+          "name": "B.E",
+          "description": "Bachelors of Engineering",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 17,
+        "data": {
+          "code": "16",
+          "name": "BCS",
+          "description": "Bachelors of Computer Sciences",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 18,
+        "data": {
+          "code": "17",
+          "name": "BBA",
+          "description": "Bachelors of Business Administration",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 19,
+        "data": {
+          "code": "18",
+          "name": "B.Ed",
+          "description": "Bachelors of Education",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 20,
+        "data": {
+          "code": "19",
+          "name": "B.Pharmacy",
+          "description": "Bachelors in Pharmacy",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 21,
+        "data": {
+          "code": "20",
+          "name": "BFA",
+          "description": "Bachelors of Fine Arts",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 22,
+        "data": {
+          "code": "21",
+          "name": "CA (Intermediate)",
+          "description": "Chartered Accountant - Intermediate Level",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 23,
+        "data": {
+          "code": "22",
+          "name": "B.Tech",
+          "description": "Bachelors in Technical",
+          "level": "4"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 24,
+        "data": {
+          "code": "23",
+          "name": "PGD",
+          "description": "Post Graduate Diploma",
+          "level": "5"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 25,
+        "data": {
+          "code": "24",
+          "name": "M.Sc",
+          "description": "Masters of Science",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 26,
+        "data": {
+          "code": "25",
+          "name": "MBA",
+          "description": "Masters of Business Administration",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 27,
+        "data": {
+          "code": "26",
+          "name": "M.Com",
+          "description": "Masters of Commerce",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 28,
+        "data": {
+          "code": "27",
+          "name": "M.Ed",
+          "description": "Masters in Education",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 29,
+        "data": {
+          "code": "28",
+          "name": "MCS",
+          "description": "Masters of Computer Sciences",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 30,
+        "data": {
+          "code": "29",
+          "name": "M.A",
+          "description": "Masters of Arts",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 31,
+        "data": {
+          "code": "30",
+          "name": "M.Pharmacy",
+          "description": "Masters in Pharmacy",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 32,
+        "data": {
+          "code": "31",
+          "name": "MPA",
+          "description": "Masters in Public Administration",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 33,
+        "data": {
+          "code": "32",
+          "name": "MEF",
+          "description": "Masters in Economics & Finance",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 34,
+        "data": {
+          "code": "33",
+          "name": "M.E",
+          "description": "Masters in Engineering",
+          "level": "6"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 35,
+        "data": {
+          "code": "34",
+          "name": "M.Phil",
+          "description": "Master of Philosophy",
+          "level": "7"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 36,
+        "data": {
+          "code": "35",
+          "name": "MS",
+          "description": "Master s of Science",
+          "level": "7"
+        }
+      },
+      {
+        "sheet": "Qualification",
+        "row": 37,
+        "data": {
+          "code": "36",
+          "name": "Ph.D",
+          "description": "Doctor of Philosophy",
+          "level": "8"
+        }
+      }
+    ],
+    "specializations": [
+      {
+        "sheet": "Specialization",
+        "row": 2,
+        "data": {
+          "code": "1",
+          "name": "SSC - Science",
+          "description": "Matric Science",
+          "qualification_code": "2"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 3,
+        "data": {
+          "code": "2",
+          "name": "SSC - Commerce",
+          "description": "Matric Commerce",
+          "qualification_code": "2"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 4,
+        "data": {
+          "code": "3",
+          "name": "HSC - Science",
+          "description": "Intermediate Science",
+          "qualification_code": "4"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 5,
+        "data": {
+          "code": "4",
+          "name": "HSC - Commerce",
+          "description": "Intermediate Commerce",
+          "qualification_code": "4"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 6,
+        "data": {
+          "code": "5",
+          "name": "HSC - Science",
+          "description": "Intermediate Pre-Engineering",
+          "qualification_code": "4"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 7,
+        "data": {
+          "code": "6",
+          "name": "Diploma - DIT",
+          "description": "Diploma in Information Technology",
+          "qualification_code": "9"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 8,
+        "data": {
+          "code": "7",
+          "name": "Diploma - DAE",
+          "description": "Diploma in Associate Engineering",
+          "qualification_code": "9"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 9,
+        "data": {
+          "code": "8",
+          "name": "Diploma- Com",
+          "description": "Diploma in Commerce",
+          "qualification_code": "9"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 10,
+        "data": {
+          "code": "9",
+          "name": "BA - Economics",
+          "description": "Bachlors of Arts in Economics",
+          "qualification_code": "10"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 11,
+        "data": {
+          "code": "10",
+          "name": "BA - Sociology",
+          "description": "Bachlors of Arts in Sociology",
+          "qualification_code": "10"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 12,
+        "data": {
+          "code": "11",
+          "name": "BA - Urdu",
+          "description": "Bachlors of Arts in Urdu",
+          "qualification_code": "10"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 13,
+        "data": {
+          "code": "12",
+          "name": "BA - English",
+          "description": "Bachlors of Arts in English",
+          "qualification_code": "10"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 14,
+        "data": {
+          "code": "13",
+          "name": "BA - Edu",
+          "description": "BA- Education",
+          "qualification_code": "10"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 15,
+        "data": {
+          "code": "14",
+          "name": "B.Sc - Math",
+          "description": "Bachelors of Science in Mathematics",
+          "qualification_code": "13"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 16,
+        "data": {
+          "code": "15",
+          "name": "B.Sc - Chem",
+          "description": "Bachelors of Science in Chemistry",
+          "qualification_code": "13"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 17,
+        "data": {
+          "code": "16",
+          "name": "B.Sc - Phy",
+          "description": "Bachelors of Science in Physics",
+          "qualification_code": "13"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 18,
+        "data": {
+          "code": "17",
+          "name": "B.Sc - App.Chem",
+          "description": "Bachelors of Science in Applied Chemistry",
+          "qualification_code": "13"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 19,
+        "data": {
+          "code": "18",
+          "name": "B.Sc - Geo",
+          "description": "Bachelors of Science in Geography",
+          "qualification_code": "13"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 20,
+        "data": {
+          "code": "19",
+          "name": "B.Sc - Micro Bio",
+          "description": "Bachelors of Science in Micro Biology",
+          "qualification_code": "13"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 21,
+        "data": {
+          "code": "20",
+          "name": "B.Sc - Zoology",
+          "description": "Bachelors of Science in Zoology",
+          "qualification_code": "13"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 22,
+        "data": {
+          "code": "21",
+          "name": "B.Sc - Botany",
+          "description": "Bachelors of Science in Botany",
+          "qualification_code": "13"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 23,
+        "data": {
+          "code": "22",
+          "name": "B.Sc - Geography",
+          "description": "Bachelors of Science in Geography",
+          "qualification_code": "13"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 24,
+        "data": {
+          "code": "23",
+          "name": "BS - Geography",
+          "description": "Bachelors of Science in Geography",
+          "qualification_code": "14"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 25,
+        "data": {
+          "code": "24",
+          "name": "M.Sc - Math",
+          "description": "Masters of Science in Mathematics",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 26,
+        "data": {
+          "code": "25",
+          "name": "M.Sc - Chem",
+          "description": "Masters of Science in Chemistry",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 27,
+        "data": {
+          "code": "26",
+          "name": "M.Sc - Phy",
+          "description": "Masters of Science in Physics",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 28,
+        "data": {
+          "code": "27",
+          "name": "M.Sc - App.Chem",
+          "description": "Masters of Science in Applied Chemistry",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 29,
+        "data": {
+          "code": "28",
+          "name": "M.Sc - Geo",
+          "description": "Masters of Science in Geography",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 30,
+        "data": {
+          "code": "29",
+          "name": "M.Sc - Micro Bio",
+          "description": "Masters of Science in Micro Biology",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 31,
+        "data": {
+          "code": "30",
+          "name": "M.Sc - Zoology",
+          "description": "Masters of Science in Zoology",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 32,
+        "data": {
+          "code": "31",
+          "name": "M.Sc - Botany",
+          "description": "Masters of Science in Botany",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 33,
+        "data": {
+          "code": "32",
+          "name": "M.Sc - Geography",
+          "description": "Masters of Science in Geography",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 34,
+        "data": {
+          "code": "33",
+          "name": "MS - Geography",
+          "description": "Masters of Science in Geography",
+          "qualification_code": "24"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 35,
+        "data": {
+          "code": "34",
+          "name": "MS - IT",
+          "description": "Masters of Science in Information Technoloy",
+          "qualification_code": "35"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 36,
+        "data": {
+          "code": "35",
+          "name": "MS - Fin",
+          "description": "Masters of Science in Finance",
+          "qualification_code": "35"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 37,
+        "data": {
+          "code": "36",
+          "name": "MS - HRM",
+          "description": "Masters of Science in Human Resources Management",
+          "qualification_code": "35"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 38,
+        "data": {
+          "code": "37",
+          "name": "MBA - Fin",
+          "description": "Masters of Business Administration in Finance",
+          "qualification_code": "25"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 39,
+        "data": {
+          "code": "38",
+          "name": "MBA - HRM",
+          "description": "Masters of Business Administration in Human Resources Management",
+          "qualification_code": "25"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 40,
+        "data": {
+          "code": "39",
+          "name": "MBA - Mkt",
+          "description": "Masters of Business Administration in Marketing",
+          "qualification_code": "25"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 41,
+        "data": {
+          "code": "40",
+          "name": "M.A - Eco",
+          "description": "Masters of Arts in Economics",
+          "qualification_code": "29"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 42,
+        "data": {
+          "code": "41",
+          "name": "M.A - IR",
+          "description": "Masters of Arts in International Relations",
+          "qualification_code": "29"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 43,
+        "data": {
+          "code": "42",
+          "name": "M.A - Urdu",
+          "description": "Masters of Arts in Urdu",
+          "qualification_code": "29"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 44,
+        "data": {
+          "code": "43",
+          "name": "M.A - Eng Lit",
+          "description": "Masters of Arts in English Literature",
+          "qualification_code": "29"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 45,
+        "data": {
+          "code": "44",
+          "name": "MPA - HRM",
+          "description": "Masters of Public Administration in Human Resource Management",
+          "qualification_code": "31"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 46,
+        "data": {
+          "code": "45",
+          "name": "MPA - Fin",
+          "description": "Masters of Public Administration in Finance",
+          "qualification_code": "31"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 47,
+        "data": {
+          "code": "46",
+          "name": "MPA - Mkt",
+          "description": "Masters of Public Administration in Marketing",
+          "qualification_code": "31"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 48,
+        "data": {
+          "code": "47",
+          "name": "MPA - MIS",
+          "description": "Masters of Public Administration in Management Information System",
+          "qualification_code": "31"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 49,
+        "data": {
+          "code": "48",
+          "name": "MPA - St Dev",
+          "description": "Masters of Public Administration in Strategic Development",
+          "qualification_code": "31"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 50,
+        "data": {
+          "code": "49",
+          "name": "Ph.D - Eco",
+          "description": "Doctor of Philosophy in Economics",
+          "qualification_code": "36"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 51,
+        "data": {
+          "code": "50",
+          "name": "Ph.D - Fin",
+          "description": "Doctor of Philosophy in Finance",
+          "qualification_code": "36"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 52,
+        "data": {
+          "code": "51",
+          "name": "Ph.D - HRM",
+          "description": "Doctor of Philosophy in Human Resource Management",
+          "qualification_code": "36"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 53,
+        "data": {
+          "code": "52",
+          "name": "Ph.D - Geography",
+          "description": "Doctor of Philosophy in Geography",
+          "qualification_code": "36"
+        }
+      },
+      {
+        "sheet": "Specialization",
+        "row": 54,
+        "data": {
+          "code": "53",
+          "name": "Ph.D - Sociology",
+          "description": "Doctor of Philosophy in Sociology",
+          "qualification_code": "36"
+        }
+      }
+    ],
+    "certification_types": [
+      {
+        "sheet": "Certification Type",
+        "row": 2,
+        "data": {
+          "code": "1",
+          "name": "Software"
+        }
+      },
+      {
+        "sheet": "Certification Type",
+        "row": 3,
+        "data": {
+          "code": "2",
+          "name": "Insurance"
+        }
+      },
+      {
+        "sheet": "Certification Type",
+        "row": 4,
+        "data": {
+          "code": "3",
+          "name": "Finance"
+        }
+      },
+      {
+        "sheet": "Certification Type",
+        "row": 5,
+        "data": {
+          "code": "4",
+          "name": "Networks"
+        }
+      },
+      {
+        "sheet": "Certification Type",
+        "row": 6,
+        "data": {
+          "code": "5",
+          "name": "Human Resources"
+        }
+      },
+      {
+        "sheet": "Certification Type",
+        "row": 7,
+        "data": {
+          "code": "6",
+          "name": "Audit"
+        }
+      },
+      {
+        "sheet": "Certification Type",
+        "row": 8,
+        "data": {
+          "code": "7",
+          "name": "Supply Chain Management"
+        }
+      },
+      {
+        "sheet": "Certification Type",
+        "row": 9,
+        "data": {
+          "code": "8",
+          "name": "Project Management"
+        }
+      },
+      {
+        "sheet": "Certification Type",
+        "row": 10,
+        "data": {
+          "code": "9",
+          "name": "Civil Services"
+        }
+      }
+    ],
+    "certifications": [
+      {
+        "sheet": "Certification",
+        "row": 2,
+        "data": {
+          "name": "MCSA",
+          "description": "Microsoft Certified System Administrator",
+          "validity_months": null,
+          "certification_type_code": "4"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 3,
+        "data": {
+          "name": "MSCE",
+          "description": "Microsoft Certified System Engineer",
+          "validity_months": null,
+          "certification_type_code": "4"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 4,
+        "data": {
+          "name": "CIMA",
+          "description": "Certificate in Business Accounting",
+          "validity_months": null,
+          "certification_type_code": "3"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 5,
+        "data": {
+          "name": "CISA",
+          "description": "Certified Information Systems Auditor",
+          "validity_months": null,
+          "certification_type_code": "6"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 6,
+        "data": {
+          "name": "CAT",
+          "description": "Certified Accounting Technician",
+          "validity_months": null,
+          "certification_type_code": "3"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 7,
+        "data": {
+          "name": "APA",
+          "description": "Accredited Public Accountant",
+          "validity_months": null,
+          "certification_type_code": "3"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 8,
+        "data": {
+          "name": "CMA",
+          "description": "Certified Management Accountant",
+          "validity_months": null,
+          "certification_type_code": "3"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 9,
+        "data": {
+          "name": "CCNA",
+          "description": "Cisco Certified Network Administrator",
+          "validity_months": null,
+          "certification_type_code": "4"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 10,
+        "data": {
+          "name": "ACIS",
+          "description": "Avaya Certified Implementation Specialist",
+          "validity_months": null,
+          "certification_type_code": "4"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 11,
+        "data": {
+          "name": "ACCA",
+          "description": "Associate Certified Chartered Accountant",
+          "validity_months": null,
+          "certification_type_code": "3"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 12,
+        "data": {
+          "name": "CA",
+          "description": "Chartered Accountant",
+          "validity_months": null,
+          "certification_type_code": "3"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 13,
+        "data": {
+          "name": "ACMA",
+          "description": "Associate Chartered Management Accountant",
+          "validity_months": null,
+          "certification_type_code": "3"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 14,
+        "data": {
+          "name": "CPA",
+          "description": "Certified Public Accountant",
+          "validity_months": null,
+          "certification_type_code": "3"
+        }
+      },
+      {
+        "sheet": "Certification",
+        "row": 15,
+        "data": {
+          "name": "CSS",
+          "description": "Central Superior Services",
+          "validity_months": null,
+          "certification_type_code": "9"
+        }
+      }
+    ],
+    "religions": [
+      {
+        "sheet": "Religion",
+        "row": 2,
+        "data": {
+          "code": "001",
+          "name": "Islam",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Religion",
+        "row": 3,
+        "data": {
+          "code": "002",
+          "name": "Chiristain",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Religion",
+        "row": 4,
+        "data": {
+          "code": "003",
+          "name": "Hindu",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Religion",
+        "row": 5,
+        "data": {
+          "code": "004",
+          "name": "Roman Catholic",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Religion",
+        "row": 6,
+        "data": {
+          "code": "005",
+          "name": "Qadiani",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Religion",
+        "row": 7,
+        "data": {
+          "code": "006",
+          "name": "Parsi",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Religion",
+        "row": 8,
+        "data": {
+          "code": "007",
+          "name": "Ahmedi",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Religion",
+        "row": 9,
+        "data": {
+          "code": "008",
+          "name": "Jewish",
+          "description": null
+        }
+      }
+    ],
+    "languages": [
+      {
+        "sheet": "Language",
+        "row": 2,
+        "data": {
+          "code": "001",
+          "name": "English",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 3,
+        "data": {
+          "code": "002",
+          "name": "Urdu",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 4,
+        "data": {
+          "code": "003",
+          "name": "Arabic",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 5,
+        "data": {
+          "code": "004",
+          "name": "Persian",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 6,
+        "data": {
+          "code": "005",
+          "name": "Sindhi",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 7,
+        "data": {
+          "code": "006",
+          "name": "Punjabi",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 8,
+        "data": {
+          "code": "007",
+          "name": "Pushto",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 9,
+        "data": {
+          "code": "008",
+          "name": "Balochi",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 10,
+        "data": {
+          "code": "009",
+          "name": "Hindi",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 11,
+        "data": {
+          "code": "010",
+          "name": "Gujrati",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 12,
+        "data": {
+          "code": "011",
+          "name": "Balti",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 13,
+        "data": {
+          "code": "012",
+          "name": "Saraiki",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 14,
+        "data": {
+          "code": "013",
+          "name": "Memoni",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 15,
+        "data": {
+          "code": "014",
+          "name": "Hindco",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 16,
+        "data": {
+          "code": "015",
+          "name": "Kashmiri",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 17,
+        "data": {
+          "code": "016",
+          "name": "Haryanwi",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 18,
+        "data": {
+          "code": "017",
+          "name": "Potohari",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 19,
+        "data": {
+          "code": "018",
+          "name": "Burushaski",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 20,
+        "data": {
+          "code": "019",
+          "name": "Kachi",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 21,
+        "data": {
+          "code": "020",
+          "name": "Khowar",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 22,
+        "data": {
+          "code": "021",
+          "name": "Sanskrit",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Language",
+        "row": 23,
+        "data": {
+          "code": "022",
+          "name": "French",
+          "description": null
+        }
+      }
+    ],
+    "training_types": [
+      {
+        "sheet": "Training Type",
+        "row": 2,
+        "data": {
+          "name": "Local Trainings",
+          "description": "Within the Country"
+        }
+      },
+      {
+        "sheet": "Training Type",
+        "row": 3,
+        "data": {
+          "name": "Internal Trainings",
+          "description": "Within the Company"
+        }
+      },
+      {
+        "sheet": "Training Type",
+        "row": 4,
+        "data": {
+          "name": "External Trainings",
+          "description": "Outside the Company"
+        }
+      },
+      {
+        "sheet": "Training Type",
+        "row": 5,
+        "data": {
+          "name": "International Trainings",
+          "description": "Outside the Country"
+        }
+      }
+    ],
+    "designations": [
+      {
+        "sheet": "Designation",
+        "row": 2,
+        "data": {
+          "code": "1",
+          "name": "Chairman",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 3,
+        "data": {
+          "code": "2",
+          "name": "CEO",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 4,
+        "data": {
+          "code": "3",
+          "name": "Director",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 5,
+        "data": {
+          "code": "4",
+          "name": "Executive Director",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 6,
+        "data": {
+          "code": "5",
+          "name": "Vice President Sales",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 7,
+        "data": {
+          "code": "6",
+          "name": "Regional Director- Security Soluitons",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 8,
+        "data": {
+          "code": "7",
+          "name": "VP Human Resources & Administration",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 9,
+        "data": {
+          "code": "8",
+          "name": "General Manager",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 10,
+        "data": {
+          "code": "9",
+          "name": "GM Sales South",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 11,
+        "data": {
+          "code": "10",
+          "name": "Senior Program Manager",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 12,
+        "data": {
+          "code": "11",
+          "name": "Senior Presales Consultant",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 13,
+        "data": {
+          "code": "12",
+          "name": "Sr. Manager Professional Services",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 14,
+        "data": {
+          "code": "13",
+          "name": "Manager Finance",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 15,
+        "data": {
+          "code": "14",
+          "name": "Project Manager",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 16,
+        "data": {
+          "code": "15",
+          "name": "Lead Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 17,
+        "data": {
+          "code": "16",
+          "name": "Sr. Software Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 18,
+        "data": {
+          "code": "17",
+          "name": "Senior Presales Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 19,
+        "data": {
+          "code": "18",
+          "name": "Sales Account Manager",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 20,
+        "data": {
+          "code": "19",
+          "name": "Legal Advisor",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 21,
+        "data": {
+          "code": "20",
+          "name": "Associate Project Manager",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 22,
+        "data": {
+          "code": "21",
+          "name": "QA Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 23,
+        "data": {
+          "code": "22",
+          "name": "Presales Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 24,
+        "data": {
+          "code": "23",
+          "name": "Graphic Designer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 25,
+        "data": {
+          "code": "24",
+          "name": "Software Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 26,
+        "data": {
+          "code": "25",
+          "name": "Associate Netwrok Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 27,
+        "data": {
+          "code": "26",
+          "name": "Senior Account Executive",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 28,
+        "data": {
+          "code": "27",
+          "name": "Associate QA Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 29,
+        "data": {
+          "code": "28",
+          "name": "Associate Presales Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 30,
+        "data": {
+          "code": "29",
+          "name": "Associate Software Engineer",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 69,
+        "data": {
+          "code": "XLS-DES-69",
+          "name": "Office Boy",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 71,
+        "data": {
+          "code": "XLS-DES-71",
+          "name": "Office Assistant",
+          "description": null
+        }
+      },
+      {
+        "sheet": "Designation",
+        "row": 74,
+        "data": {
+          "code": "XLS-DES-74",
+          "name": "Trainee HR",
+          "description": null
+        }
+      }
+    ]
+  },
+  "excluded_sheets": [
+    "Leave Type",
+    "Compensations or Allowance",
+    "Expense Head",
+    "Expense Type",
+    "Unit",
+    "Compensation Plan",
+    "Benefit Plan",
+    "Leave Plan",
+    "Loan Plan",
+    "Expense Claim Plan"
+  ],
+  "generated_designation_codes": [
+    {
+      "row": 69,
+      "code": "XLS-DES-69",
+      "name": "Office Boy"
+    },
+    {
+      "row": 71,
+      "code": "XLS-DES-71",
+      "name": "Office Assistant"
+    },
+    {
+      "row": 74,
+      "code": "XLS-DES-74",
+      "name": "Trainee HR"
+    }
+  ]
+}

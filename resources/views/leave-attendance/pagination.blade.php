@@ -1,0 +1,2 @@
+<nav class="la-pagination" aria-label="Module pagination"><span>Showing {{ $paginator->firstItem() ?? 0 }}–{{ $paginator->lastItem() ?? 0 }} of {{ $paginator->total() }}</span>
+@if($paginator->hasPages())<div>@if($paginator->onFirstPage())<span>Previous</span>@else<a href="{{ $paginator->previousPageUrl() }}">Previous</a>@endif<span>Page {{ $paginator->currentPage() }} of {{ $paginator->lastPage() }}</span>@if($paginator->hasMorePages())<a href="{{ $paginator->nextPageUrl() }}">Next</a>@else<span>Next</span>@endif</div>@endif</nav>

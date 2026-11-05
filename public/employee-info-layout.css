@@ -1,0 +1,24 @@
+.reference-form{padding:0;overflow:hidden}
+.reference-section-title{padding:10px 18px;background:linear-gradient(90deg,#fff0d7,#fffaf2);border-top:1px solid #ead9bd;border-bottom:1px solid #ead9bd;color:#8f5000;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.reference-section-title:first-child{border-top:0}
+.identification-layout{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:28px;padding:22px}
+.reference-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;padding:22px}
+.identification-layout .reference-fields{padding:0}
+.reference-fields.single-column{grid-template-columns:1fr}
+.reference-field{display:grid;grid-template-columns:155px minmax(0,1fr);align-items:center;gap:12px;min-width:0}
+.reference-field.full-row{grid-column:1/-1}
+.reference-field label{font-size:12px;font-weight:700;color:#4f4a43;line-height:1.25}
+.reference-field label span{color:#cf3f2f}
+.reference-field input,.reference-field select,.reference-field textarea{margin:0;min-width:0}
+.reference-field.textarea-field{align-items:start}
+.reference-field.textarea-field label{padding-top:9px}
+.compact-check{display:flex!important;align-items:center;gap:8px;font-weight:600!important}
+.compact-check input[type=checkbox]{width:auto;margin:0}
+.employee-photo-panel{align-self:start;border:1px solid #e1c38f;background:#fffaf1;border-radius:10px;padding:12px;text-align:center}
+.employee-photo-preview{height:154px;border:1px solid #ded8ce;background:linear-gradient(145deg,#f2f2f2,#dedede);border-radius:7px;display:grid;place-items:center;margin-bottom:12px;overflow:hidden;color:#8b8b8b;font-weight:800;letter-spacing:.08em}
+.employee-photo-preview img{width:100%;height:100%;object-fit:cover}
+.employee-photo-panel>label{display:block;font-size:12px;font-weight:800;margin-bottom:7px}.employee-photo-panel input{font-size:11px;padding:6px}.employee-photo-panel small{display:block;color:var(--muted);font-size:10px;margin-top:7px}
+.reference-choices{padding:20px 22px;margin:0}
+@media(max-width:1200px){.reference-field{grid-template-columns:130px minmax(0,1fr)}.reference-fields{gap-column:18px}}
+@media(max-width:980px){.identification-layout{grid-template-columns:1fr}.employee-photo-panel{display:grid;grid-template-columns:130px 1fr;align-items:center;gap:12px;text-align:left}.employee-photo-preview{grid-row:1/4;height:130px;margin:0}.reference-fields{grid-template-columns:1fr}}
+@media(max-width:640px){.reference-field{grid-template-columns:1fr;gap:5px}.reference-field.textarea-field label{padding-top:0}.employee-photo-panel{grid-template-columns:90px 1fr}.employee-photo-preview{height:90px}}

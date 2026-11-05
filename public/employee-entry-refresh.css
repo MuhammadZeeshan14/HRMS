@@ -1,0 +1,135 @@
+/* Employee create/edit layout adapted from the supplied code.html design. */
+.app-workspace.employee-workspace.employee-entry-page{background:#f8fafc;color:#1e293b}
+.app-workspace.employee-workspace.employee-entry-page .sidebar{background:#0f172a}
+.app-workspace.employee-workspace.employee-entry-page .content{padding:14px 24px 88px;max-width:1720px}
+.app-workspace.employee-workspace.employee-entry-page .topbar{height:60px;padding:0 24px}
+.app-workspace.employee-workspace.employee-entry-page .record-strip{height:auto;min-height:44px;padding:9px 24px;background:#fff;border-bottom:1px solid #e2e8f0;font-size:12px;gap:12px}
+.app-workspace.employee-workspace.employee-entry-page .record-strip>.ui-icon{color:#f97316}
+.app-workspace.employee-workspace.employee-entry-page .record-filled,.app-workspace.employee-workspace.employee-entry-page .record-status{border-radius:20px;padding:4px 10px;white-space:nowrap;font-size:11px}
+.app-workspace.employee-workspace.employee-entry-page .entry-breadcrumb{display:flex;gap:10px;align-items:center;font-size:12px;color:#94a3b8}
+.app-workspace.employee-workspace.employee-entry-page .entry-breadcrumb strong{font-weight:600;color:#334155}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .module-heading{padding:0 4px 7px;background:transparent;border:0;font-size:11px;font-weight:700;color:#647e9e;letter-spacing:.02em}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .form-tabs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;padding:0 4px 14px;margin:0 0 14px;border:0;border-bottom:1px solid #e2e8f0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .form-tabs button{width:100%;min-height:38px;height:auto;white-space:normal;line-height:1.3;border-radius:4px;padding:6px 8px;background:linear-gradient(#fff,#f1f5f9);border:1px solid #cbd5e1;font-size:12px;color:#405c7a;box-shadow:0 1px 2px #0f172a08}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .form-tabs button.active{background:linear-gradient(#ffb35f,#f97316);border-color:#f97316;color:#331700;font-weight:700}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-info-panel{padding:0;background:transparent;border:0;box-shadow:none;min-height:0}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-card,
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-info-panel>.employee-subsection,
+.app-workspace.employee-workspace.employee-entry-page .employee-form>.tab-panel.card{background:#fff;border:1px solid #dce5f0;border-radius:9px;padding:16px;margin:0 0 12px;box-shadow:0 1px 2px #0f172a05;min-width:0}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-section-title{display:flex;align-items:center;gap:9px;margin:0 0 14px;padding:0 0 11px;border-bottom:1px solid #edf2f7;font-size:13px;line-height:1.4;font-weight:700;text-transform:uppercase;letter-spacing:.035em;color:#1e293b}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-section-title::before{content:'';width:8px;height:8px;flex:0 0 8px;border-radius:50%;background:#f97316}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 16px;align-items:start}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .reference-field{display:flex;flex-direction:column;align-items:stretch;gap:0;min-width:0;padding:0;grid-column:auto!important}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .reference-field>label,
+.app-workspace.employee-workspace.employee-entry-page .employee-form .form-grid>label{display:block;margin:0 0 5px;font-size:12px;font-weight:500;line-height:1.4;color:#334155}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .reference-field>label span{color:#f43f5e}
+.app-workspace.employee-workspace.employee-entry-page .employee-form input:not([type=hidden]):not([type=checkbox]):not([type=file]),
+.app-workspace.employee-workspace.employee-entry-page .employee-form select{width:100%!important;max-width:none!important;height:36px;min-height:36px;margin:0;padding:7px 10px;font-size:12px;line-height:1.4;border:1px solid #cbd5e1;border-radius:6px;background:#fbfcfe;color:#334155;box-shadow:0 1px 2px #0f172a03}
+.app-workspace.employee-workspace.employee-entry-page .employee-form textarea{width:100%;max-width:none!important;min-height:66px;height:66px;margin:0;padding:9px 10px;border:1px solid #cbd5e1;border-radius:6px;background:#fbfcfe;font-size:12px;line-height:1.5;color:#334155;resize:vertical}
+.app-workspace.employee-workspace.employee-entry-page .employee-form :is(input,select,textarea):focus{border-color:#f97316;outline:0;box-shadow:0 0 0 2px #ffedd5}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .designation-picker{width:100%;min-width:0}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-wide{grid-column:1/-1!important}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-address{grid-column:span 2!important}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-address textarea{height:36px;min-height:36px;padding:7px 10px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-location-first{grid-column:auto!important}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-reporting-first{grid-column:1!important}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-photo{grid-column:4;grid-row:1/span 2;position:relative;align-self:start;width:100%;max-width:none;padding:0;margin:0;border:0;background:transparent;text-align:center}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-photo-title{display:block;margin-bottom:6px;color:#334155;font-size:12px;font-weight:500}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .employee-photo-preview{display:grid;place-items:center;width:112px;height:124px;margin:0 auto!important;padding:0;border:2px dashed #cbd5e1;border-radius:7px;background:#f8fafc;cursor:pointer}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-photo-prompt{display:flex;flex-direction:column;align-items:center;gap:5px;color:#475569;font-size:11px;font-weight:500;letter-spacing:0}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-photo-prompt svg{width:30px;height:30px;padding:7px;border-radius:50%;background:#e2e8f0;color:#94a3b8}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-photo-prompt small{font-size:9px;color:#94a3b8}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-dual{align-self:end;min-height:36px;justify-content:center}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .compact-check{display:flex!important;align-items:center;gap:9px;width:auto;height:36px;min-height:36px;margin:0;padding:0;border:0;background:none;font-size:12px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-dual input[type=checkbox]{appearance:none;position:relative;width:36px;height:20px;min-height:20px;border:0;border-radius:20px;background:#e2e8f0;cursor:pointer;transition:background .15s}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-dual input[type=checkbox]::after{content:'';position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0f172a30;transition:transform .15s}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-dual input:checked{background:#f97316}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-dual input:checked::after{transform:translateX(16px)}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-dual input:focus-visible{outline:2px solid #f97316;outline-offset:3px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .language-field{margin:0;padding:0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .language-field small{display:none}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .employee-subsection>.section-heading{padding:0 0 11px;margin:0 0 12px;border-top:0;border-bottom:1px solid #edf2f7}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .section-heading h2{font-size:13px;text-transform:uppercase;letter-spacing:.025em;margin:0}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .section-heading p{font-size:11px;margin-top:4px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .form-grid{gap:12px 16px;margin-bottom:12px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .form-grid label>input,
+.app-workspace.employee-workspace.employee-entry-page .employee-form .form-grid label>select,
+.app-workspace.employee-workspace.employee-entry-page .employee-form .form-grid label>textarea{margin-top:5px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .sticky-actions{left:256px;right:0;min-height:56px;padding:10px 24px;border-top:1px solid #dce5f0;background:#fff;box-shadow:0 -1px 4px #0f172a04;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .sticky-actions>span{color:#94a3b8;font-size:11px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .sticky-actions .btn{min-height:34px;padding:7px 18px;border-radius:6px;font-size:12px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .sticky-actions .primary{background:#ea580c;border-color:#ea580c}
+/* Repeatable records use the same card rhythm and four-column fields as Employee Info. */
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel>.section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;padding:0 0 11px;border-bottom:1px solid #edf2f7}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel>.section-heading.divided{margin-top:20px;padding-top:16px;border-top:1px solid #edf2f7}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel>.section-heading h2{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700;line-height:1.4;letter-spacing:.035em}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel>.section-heading h2::before{content:'';width:8px;height:8px;flex:0 0 8px;border-radius:50%;background:#f97316}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel>.section-heading p{margin:4px 0 0 17px;color:#718096;font-size:11px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel>.section-heading .btn{min-height:32px;padding:6px 11px;border:1px solid #fed7aa;background:#fff7ed;color:#c2410c;border-radius:6px;font-size:12px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .repeater-row{display:flex;flex-direction:column;gap:12px;padding:14px;margin:0 0 12px;border:1px solid #e2e8f0;border-radius:7px;background:#fff;box-shadow:0 1px 2px #0f172a03}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .repeater-row[hidden]{display:none}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .repeater:not(:has(.repeater-row:not([hidden]))):not(:has(.employee-record-table tbody tr))::before{content:'No records added. Use the Add button above to add a record.';display:block;padding:18px 14px;border:1px dashed #dce5f0;border-radius:7px;background:#fbfcfe;color:#718096;font-size:12px;text-align:center}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .repeater-row .form-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 16px;margin:0;align-items:start}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .form-grid>label{min-width:0;margin:0;font-size:12px;font-weight:500;line-height:1.4;color:#334155}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .form-grid>label.wide{grid-column:1/-1}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel input[type=file]{display:block;width:100%;max-width:none;min-height:36px;padding:5px;border:1px solid #cbd5e1;border-radius:6px;background:#fbfcfe;font-size:11px;color:#64748b}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel input[type=file]::file-selector-button{padding:3px 7px;margin-right:7px;border:1px solid #cbd5e1;border-radius:4px;background:white;color:#405c7a;cursor:pointer}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .form-grid small{display:block;margin-top:5px;color:#94a3b8;font-size:10px;font-weight:400}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .remove-row{position:static;align-self:flex-end;min-height:28px;padding:4px 10px;border:1px solid #fecdd3;border-radius:5px;background:#fff1f2;color:#b43d48;font-size:11px;cursor:pointer}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .remove-row:hover{background:#ffe4e6}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .panel-bottom-actions{margin-top:14px;padding-top:12px;border-top:1px solid #edf2f7;gap:8px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .panel-bottom-actions .btn{min-height:34px;padding:7px 12px;border-radius:6px;font-size:12px}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .panel-bottom-actions .primary{background:#ea580c;border-color:#ea580c}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-scroll{width:100%;overflow:auto;border:1px solid #e2e8f0;border-radius:7px;margin-bottom:12px}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-scroll[hidden]{display:none}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-table{width:100%;border-collapse:collapse;min-width:700px}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-table caption{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-table th{padding:10px 12px;font-size:11px;white-space:nowrap;background:#f8fafc;color:#64748b;border-bottom:1px solid #e2e8f0}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-table td{padding:10px 12px;vertical-align:top;border-bottom:1px solid #edf2f7;font-size:12px;min-width:110px;max-width:260px;overflow-wrap:anywhere;white-space:pre-line}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-table tr:last-child td{border-bottom:0}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-actions{position:sticky;right:0;background:#fff;min-width:145px!important;box-shadow:-1px 0 #e2e8f0;white-space:nowrap!important}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-actions>div{display:flex;gap:6px}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-actions .btn{min-height:28px;padding:4px 9px;font-size:11px}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-dialog{width:min(1000px,calc(100vw - 28px));max-height:85vh;padding:0;border:1px solid #dce5f0;border-radius:10px;background:white;color:#334155;box-shadow:0 20px 70px #0f172a35}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-dialog::backdrop{background:#0f172a80}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-dialog-head{padding:16px;border-bottom:1px solid #edf2f7}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-dialog-head h2{font-size:15px;margin:0;text-transform:capitalize}
+.app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .employee-record-dialog .repeater-row{margin:0;padding:16px;border:0;box-shadow:none}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-dialog .remove-row{display:none}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-dialog-foot{display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:12px 16px;border-top:1px solid #edf2f7}
+.app-workspace.employee-workspace.employee-entry-page .employee-record-dialog-foot small{margin-right:auto;color:#718096;font-size:11px}
+@media(max-width:1200px){
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .repeater-row .form-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-photo{grid-column:3;grid-row:1/span 2}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .form-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:900px){
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .repeater-row .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-photo{grid-column:2;grid-row:1/span 2}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-address{grid-column:1/-1!important}
+}
+@media(max-width:760px){
+ .app-workspace.employee-workspace.employee-entry-page .content{padding:12px 12px 90px}
+ .app-workspace.employee-workspace.employee-entry-page .topbar{padding:0 12px}
+ .app-workspace.employee-workspace.employee-entry-page .entry-breadcrumb{font-size:11px;gap:6px}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .sticky-actions{left:0;padding:9px 12px}
+ .app-workspace.employee-workspace.employee-entry-page .record-strip{padding:9px 12px}
+}
+@media(max-width:520px){
+ .app-workspace.employee-workspace.employee-entry-page .employee-record-dialog-foot{flex-wrap:wrap}
+ .app-workspace.employee-workspace.employee-entry-page .employee-record-dialog-foot small{flex-basis:100%}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .repeater-row .form-grid{grid-template-columns:minmax(0,1fr)}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel>.section-heading{align-items:flex-start;flex-direction:column;gap:10px}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-record-panel .repeater-row{padding:11px}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .panel-bottom-actions{flex-wrap:wrap}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-photo{grid-column:1;grid-row:auto;justify-self:start;width:112px}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-grid>.reference-field{grid-column:1!important}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-card,
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .entry-info-panel>.employee-subsection{padding:12px}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .form-tabs{display:flex;overflow-x:auto;flex-wrap:nowrap;gap:6px}
+ .app-workspace.employee-workspace.employee-entry-page .employee-form .form-tabs button{width:auto;min-width:100px;flex:0 0 auto;font-size:11px}
+ .app-workspace.employee-workspace.employee-entry-page .entry-breadcrumb{display:none}
+}
