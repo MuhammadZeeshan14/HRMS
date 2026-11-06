@@ -34,3 +34,4 @@ yarn-error.log
 /database/backups/
 /docs/employee-access-verification.md
 /docs/employee-reporting-audit.md
+/.vercel/

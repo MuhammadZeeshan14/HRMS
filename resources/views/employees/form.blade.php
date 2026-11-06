@@ -31,7 +31,7 @@
 <aside class="employee-photo-panel entry-photo">
                 <span class="entry-photo-title">Photo</span><input id="photo" type="file" name="photo" accept="image/jpeg,image/png,image/webp" aria-label="Choose employee photo">
                 <label for="photo" class="employee-photo-preview" title="Choose employee photo">
-                    @if($employee->photo_path)<img src="{{ Storage::url($employee->photo_path) }}" alt="Employee photo">@else<span class="entry-photo-prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h4l2-3h4l2 3h4v13H4z"/><circle cx="12" cy="13" r="4"/></svg><span>Choose image</span><small>PNG, JPG or WebP</small></span>@endif
+                    @if($employee->photo_path)<img src="{{ $employee->photoUrl() }}" alt="Employee photo">@else<span class="entry-photo-prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h4l2-3h4l2 3h4v13H4z"/><circle cx="12" cy="13" r="4"/></svg><span>Choose image</span><small>PNG, JPG or WebP</small></span>@endif
                 </label>
             </aside>
 <div class="reference-field"><label for="date_of_joining">Date of joining <span>*</span></label><input id="date_of_joining" type="date" name="date_of_joining" value="{{ old('date_of_joining', $employee->date_of_joining?->format('Y-m-d')) }}" required></div>

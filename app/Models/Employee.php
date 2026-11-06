@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class Employee extends Model
 {
@@ -14,6 +15,15 @@ class Employee extends Model
     protected $casts = ['date_of_birth' => 'date', 'date_of_joining' => 'date', 'dual_reporting' => 'boolean', 'delegated_admin' => 'boolean', 'is_test_employee' => 'boolean'];
 
     protected $appends = ['display_name'];
+
+    public function photoUrl(): string
+    {
+        $disk = Storage::disk('public');
+
+        return config('filesystems.disks.public.driver') === 's3'
+            ? $disk->temporaryUrl($this->photo_path, now()->addMinutes(5))
+            : $disk->url($this->photo_path);
+    }
 
     public function save(array $options = [])
     {
